@@ -1,0 +1,17 @@
+name: Kcruby
+storage:
+  strategy: local
+objects:
+  bagpipe:
+    fields:
+      name: text
+      weight: number
+      description: longtext
+      markup: html
+      birthday: datetime
+      has_stuff: boolean
+      pick_one: select_one(Blue|Red|Green)
+      image: image
+      vimeo_video: vimeo
+      youtube_video: youtube
+      other: file

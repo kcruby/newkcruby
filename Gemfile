@@ -41,3 +41,4 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'kilt-cms', git: 'git@github.com:AsheAvenue/Kilt.git'

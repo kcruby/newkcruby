@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+	mount Kilt::Engine => '/admin', as: 'kilt_engine'
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
