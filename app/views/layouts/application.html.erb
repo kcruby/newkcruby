@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kcruby</title>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" type="image/ico" href="/assets/images/favicon.ico">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<!--HEADER-->
+		<div id="header"> 
+			<div class="col-sm-12 col-lg-12">
+				<div class="row">
+			<!--LOGO-->	
+		<div id="logo">
+			<a class="scroll" href="#home"><img src="/assets/images/logo.png" alt="logo" /></a>
+		</div>
+			<!--//LOGO-->
+		
+		<!--MENU-->
+			<ul id="menu">
+				<li><a class="scroll" href="#home">Home</a></li>
+				<li><a class="scroll" href="#about">What to Expect</a></li>
+				<li><a class="scroll" href="#team">About Us</a></li>
+				<li><a class="scroll" href="#price">Upcoming Meetings</a></li>
+				<li><a class="scroll" href="#contact">Contact</a></li>
+				<li><a class="scroll" href="blog.html">Blog</a></li>
+			</ul>
+			<!--//MENU-->
+		<!--RESPONSIVE TOGGLE-->
+		<div id="nav-toggle">
+			<i class="fa fa-bars"></i>
+		</div>
+	<!--//RESPONSIVE TOGGLE-->
+		</div>
+	</div>
+		</div>
+		<!--//HEADER-->
+		
+	<!--HOME SECTION STARTS-->
+		<section id="home" class="single_image">
+		<div class="light_overlay">
+			<!--ANIMATED TEXT-->	
+					<div id="content">
+						<div class="wow bounceInDown" data-wow-duration="3s" data-wow-delay="4.5s">
+							<img src='/assets/images/ruby.png' class="heart wow pulse"  data-wow-iteration="infinite"/>
+						</div>
+						
+						<div class="byline wow slideInLeft pad45" data-wow-delay="4s">
+							Est. 2003
+						</div>
+						
+						<h1 class="wow bounceInDown" data-wow-duration="3s" data-wow-delay="2s">
+							KC RUBY
+						</h1>
+						
+						<div class="name wow bounceInDown" data-wow-duration="3s" data-wow-delay="0.1s">
+							a meetup
+						</div>
+						
+						<div class="text-center pad30">
+							<a href="#about" class="scroll">
+							<i class="fa fa-caret-down fa-inverse ilink fa-3x wow rotateIn animated" data-wow-duration="1s" data-wow-delay="8s"></i></a>
+						</div>
+					</div>	
+				</div>	
+				</section>
+			<!--//HOME SECTION ENDS-->
+	
+	
+	<!--BIG IMAGE-->
+		<section id="big_image" >
+		
+		</section>
+	<!--//BIG IMAGE ENDS-->
+	
+	<!--ABOUT SECTION STARTS-->	
+			<section id="about">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 col-lg-12">
+						<h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+							What to expect
+						</h1>
+						
+						<div class="lead wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+							Share ideas, code, and your love for <span class="colour"><strong>Ruby</strong></span>. Show off your latest project, gems and plugins, or something you learned. <span class="colour">Open to all skill levels</span>… just show up and join the fun!
+						</div>		
+						</div>
+					</div>
+				</div>			
+		    </section>
+		<!--//ABOUT SECTION ENDS-->
+	
+		
+		<!--SOME STATS-->
+	<section id="milestones">
+		<div class="well">	
+			<div class="dark_overlay">	
+				<div class="container">
+					<h1 class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
+						some stats
+					</h1>
+				<div class="pad45"></div>
+				
+				<!--COUNTERS-->
+				<!--1-->
+				<div class="col-sm-4 col-lg-4 text-center">
+				<div class="counter wow bounceIn" -wow-offset="80" data-wow-duration="2s">
+					<div id="counter-1"></div>
+						<p class="light">Days Since Founded</p>
+					</div>	
+						</div>
+				<!--2-->
+				<div class="col-sm-4 col-lg-4 text-center">
+				<div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
+					<div id="counter-2"></div>
+						<p class="light">Number Of Members</p>
+					</div>
+						</div>
+				<!--3-->	
+				<div class="col-sm-4 col-lg-4 text-center ">
+				<div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
+					<div id="counter-3"></div>
+						<p class="light">Past Meetups</p>
+					</div>
+						</div>
+						<!--//COUNTERS-->
+					</div>
+				</div>
+			</div>
+		</section>
+	<!--//SOME STATS-->
+
+		
+		<!--TEAM SECTION STARTS-->	
+		<section id="team">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-lg-12">
+				<h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+					Who we are
+				</h1>
+				
+				<div class="lead  wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+					 
+					The <span style="font-size:1.2em;">Kansas City Ruby User Group</span> (KCRug) was founded in <span class="colour">November of 2003</span>, by <strong><span class="colour">Jason Clinton</span></strong> and <strong><span class="colour">Shashank Date</span></strong>. Jason and Shashank formed the group with the desire to have <strong>a common place where Ruby programmers could come together</strong> and talk about Ruby. 
+				</div>
+			</div>
+		
+		<div class="col-sm-12 col-lg-6">
+			<p class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
+				KCRug is a member of a community of User Groups around the country. Anyone is welcome to attend. There are no dues or fees, and you don't have to know anything about Ruby or Rails. There is a chance you might learn something from others in the group.
+			</p>	
+				</div>
+		
+		<div class="col-sm-12 col-lg-6">
+			<p class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
+				Ruby is a computer programming language. It is very often used together with Rails, which is a framework for quickly producing robust web applications based upon databases.
+			</p>
+				</div>
+			</div>
+		</div>
+		
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-lg-12 pad15">
+					<!--BUTTONS-->	
+					<a href="#contact" class="scroll btn marg-right10 wow bounceIn" data-wow-offset="80" data-wow-duration="2s">CONTACT US</a>
+				<div class="pad45"></div>
+				
+		
+		<div class="pad60"></div>
+			</div>
+				</div>
+					</div> 
+					</section>
+				<!--//TEAM SECTION ENDS-->
+
+	
+	<!--UPCOMING MEETINGS SECTION STARTS-->	
+		<section id="price">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-lg-12">
+						<h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+							Upcoming Meetups
+						</h1>
+					
+					<div class="lead  wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-lg-12">
+				<div class="row">
+			<div id="pricing" class="container text-center">
+			
+		<!--1-->		
+	 <div class="col-sm-6 col-lg-3  wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
+        <div class="price-plan">
+			<div class="price-plan-top">
+            	<a class="price-plan-link">
+				<h2>KC Ruby: the Fireworks Safety edition</h2>
+				<div class="price">
+				<span class="dollar"><span style="font-size:1.6em;">July</span></span><span class="amt">8th</span> <span class="mo">2014</span>
+                <p class="price-breakdown">
+                		<br><span style="font-size:1.5em;"><span style="font-size:1.5em;">Tuesday&nbsp;&nbsp;&nbsp;</span><br><br><span style="font-size:1.5em;"</span>7:00</span><span style="font-size:1.2em;">pm</span>&nbsp;to&nbsp;<span style="font-size:1.5em;">9:00</span><span style="font-size:1.2em;">pm</span></span>
+                </p>
+              </div>
+            </a>
+          		</div>
+				<div class="info-wrapper">
+				<ul class="list-group">
+					<li><strong>Talk</strong>: Go Further in <span class="fa colour">ActiveRecord</span> with Arel ==> <strong>Samuel Mullen</strong></li>
+				</ul>
+					<a href="http://www.meetup.com/kcruby/events/188453542/" class="btn"><span style="font-size:1.4em;">RSVP</span><br>on meetup.com</a>
+				</div>
+			</div>
+		</div>
+
+		</div>
+		
+		<!--CLIENTS-->
+		<div class="wow fadeIn col-lg-10 col-lg-offset-1 pad45" data-wow-offset="80">
+			<div id="clients">
+			</div>	
+		<div class="pad45"></div>
+	</div>
+		</div>
+			</div>
+				</div>
+					</div>
+				</section>
+			<!--//SECTION ENDS-->
+	
+	<!--//MP4 VIDEO SECTION STARTS-->
+	<section  class="wallpapered video-section">
+	<div class="video_overlay">	
+		<div id="video_content">
+			<div class="col-sm-12 col-lg-10 col-lg-offset-1 text-center wow fadeInUp" data-wow-offset="80" data-wow-duration="2s">
+				<h2 class="text-center">
+					"Complexity is OK <br>if people can handle it."
+				</h2>
+					<h4>-- Matz</h4>
+				</div>
+			</div>
+		</div>	
+	</section>
+	<!--//MP4 VIDEO SECTION ENDS-->
+	
+	
+	<!--BLOG POSTS-->
+		<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-lg-12 pad30  wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
+					<h2><%= link_to "New Blog Post", :controller => "blogs", :action => "new" %></h2>
+				<div class="pad30"></div>
+			
+			<div id="grid-container2" class="cbp-l-grid-blog pad90">
+                <ul>
+				<!--1-->
+                    <li class="cbp-item">
+                        <a href="#" class="cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                              
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-text">VIEW POST</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="cbp-l-grid-blog-title">We want to rule the world </a>
+                        <div class="cbp-l-grid-blog-date">20 January 2014</div>
+                        <div class="cbp-l-grid-blog-split">|</div>
+                        <a href="#" class="cbp-l-grid-blog-comments">12 comments</a>
+                    </li>
+				<!--2-->
+                    <li class="cbp-item">
+                        <a href="#" class="cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                               
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-text">VIEW POST</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="cbp-l-grid-blog-title">The Office</a>
+                        <div class="cbp-l-grid-blog-date">25 February 2014</div>
+                        <div class="cbp-l-grid-blog-split">|</div>
+                        <a href="#" class="cbp-l-grid-blog-comments">8 comments</a>
+                    </li>
+				<!--3-->
+                    <li class="cbp-item">
+                        <a href="#" class="cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                               
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-text">VIEW POST</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="cbp-l-grid-blog-title">Red flowers</a>
+                        <div class="cbp-l-grid-blog-date">27 March 2014</div>
+                        <div class="cbp-l-grid-blog-split">|</div>
+                        <a href="#" class="cbp-l-grid-blog-comments">23 comments</a>
+                                             
+                    </li>
+          		<!--4-->      
+                    <li class="cbp-item">
+                        <a href="#" class="cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-text">VIEW POST</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="cbp-l-grid-blog-title">Get your camera out...</a>
+                        <div class="cbp-l-grid-blog-date">25 April 2014</div>
+                        <div class="cbp-l-grid-blog-split">|</div>
+                        <a href="#" class="cbp-l-grid-blog-comments">111 comments</a>
+                    </li>
+                </ul>
+            </div>
+		</div>
+	</div>
+		</div>
+			<div class="pad30"></div>
+		</section>
+	<!--//BLOG POSTS-->
+
+			<!--CONTACT SECTION STARTS-->
+				<section id="contact">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 col-lg-12 ">
+							
+							<h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+								Contact
+							</h1>
+							
+							<div class="lead wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+								Sometimes <strong>magic</strong> is just someone <strong>spending</strong> more time on something than anyone else might reasonably expect.
+							</div>
+							
+							<div class="row">
+								<div class="col-sm-6 col-lg-6  wow fadeInUp" data-wow-offset="80" data-wow-duration="2s">
+								
+								<h2>Do you need a website,<br>have a question or comment?</h2> 
+								
+								<p>
+									Flair Design Studio,<br>
+									23 Mornington Crescent,<br>
+									Camden High Street,<br>
+									London NW1 7JE
+								</p>
+								
+								<ul class="fa-ul">
+									<li><i class="fa-li fa fa-phone inverse"></i> <span class="inverse">+44 020 2345 1987</span></li>
+									<li><i class="fa-li fa fa-envelope inverse"></i> <a href="mailto:#">name@example.com</a></li>
+									<li><i class="fa-li fa fa-globe inverse"></i> <a href="#">www.example.com</a></li>
+									
+								</ul>
+								
+								<ul class="social-icons">
+									<li class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
+										<a href="#"><i class="fa fa-twitter"></i></a>
+									</li>
+									<li class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s" data-wow-delay="0.5s">
+										<a href="#"><i class="fa fa-facebook"></i></a>
+									</li>
+									<li class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s" data-wow-delay="1s">
+										<a href="#"><i class="fa fa-github"></i></a>
+									</li>
+									<li class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s" data-wow-delay="1.5s">
+										<a href="#"><i class="fa fa-pinterest"></i></a>
+									</li>
+									<li class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s" data-wow-delay="2s">
+										<a href="#"><i class="fa fa-instagram"></i></a>
+									</li>
+									<li class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s" data-wow-delay="2.5s">
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+								</li>
+							</ul>
+						</div>
+						
+						<div class="col-sm-6 col-lg-6  wow fadeInUp" data-wow-offset="80" data-wow-duration="2s">
+						<div class="contact_form">  
+							<div id="note"></div>
+							<div id="fields">
+							<form id="ajax-contact-form">
+							<input class="col-xs-12 col-md-12" type="text" name="name" value="" placeholder="Name" />
+							<input class="col-xs-12 col-md-12" type="text" name="email" value="" placeholder="Email"/>
+							<input class="col-xs-12 col-md-12" type="text" name="subject" value="" placeholder="Subject"  />
+							<textarea name="message" id="message" class="col-xs-12  col-md-12" placeholder="Message"></textarea>
+							<div class="clear"></div>
+							<input type="submit" class="btn marg-right10" value="submit" />
+							<input type="reset" class="btn" value="reset" />
+							<div class="clear"></div>
+							</form>  
+						</div>
+					</div> 
+				<!-- // End FORM -->	
+				</div>
+			</div>
+		</div>
+			</div>
+				</div>
+					<div class="pad60"></div>
+						</section>
+							<!--//END CONTACT SECTION--> 
+							
+							<!--START FOOTER--> 		
+								<footer>			
+									<!--Google Map-->
+										<div id="google-maps">
+											<div class="google-maps">
+										</div>
+									</div>
+									<!-- // End Google Map -->	
+								
+								<div class="center footer">
+								<!-- UP TO TOP -->	
+									<div class="wow bounce" data-wow-offset="80" data-wow-duration="2s">
+										<a href="#home" class=" scroll">
+											<span class="fa-stack fa-lg">
+												<i class="fa fa-circle fa-stack-2x "></i>
+												<i class="fa fa-angle-double-up fa-stack-1x fa-inverse"></i>
+											</span></a>
+										</div>
+									
+									<div id="copyright" class="wow bounceIn" data-wow-offset="80" data-wow-duration="2s">&copy; 2014 FLAIR DESIGN STUDIO
+									<br>
+									<a href="http://www.spiralpixel.com">Template by Spiral Pixel</a>
+								</div>
+							</div>
+						</footer>
+					<!--//END--> 
+<!--SCRIPTS--> 
+<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+	$(".wallpapered").wallpaper();
+	});
+//]]>
+</script>	
+
+	<script type="text/javascript">
+//<![CDATA[
+	$(document).ready(function() {
+    		$("#clients").owlCarousel({
+				autoPlay: 3000, //Set AutoPlay to 3 seconds
+				items : 4,
+				itemsDesktop : [1199,3],
+				itemsDesktopSmall : [979,3]
+			});
+		});
+	//]]>
+</script>
+<%= yield %>
+</body>
+</html>
