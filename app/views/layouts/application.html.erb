@@ -30,7 +30,7 @@
 				<li><a class="scroll" href="#team">About Us</a></li>
 				<li><a class="scroll" href="#price">Upcoming Meetings</a></li>
 				<li><a class="scroll" href="#contact">Contact</a></li>
-				<li><a class="scroll" href="blog.html">Blog</a></li>
+				<li><a class="scroll" href="#blog">Blog</a></li>
 			</ul>
 			<!--//MENU-->
 		<!--RESPONSIVE TOGGLE-->
@@ -260,13 +260,13 @@
 	
 	
 	<!--BLOG POSTS-->
-		<section>
+		<section id="blog">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-lg-12 pad30  wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
 					<h2>Latest Blog Posts</h2>
 				<div class="pad30"></div>
-			
+			<%= yield %>
 			<div id="grid-container2" class="cbp-l-grid-blog pad90">
                 <ul>
 				<!--1-->
@@ -483,6 +483,5 @@
 		});
 	//]]>
 </script>
-<%= yield %>
 </body>
 </html>
