@@ -26,13 +26,10 @@
 		<!--MENU-->
 			<ul id="menu">
 			    <!-- TODO: change 'href' links to 'link_to' -->
-				<li><a class="scroll" href="../../#home">Home</a></li>
-				<li><a class="scroll" href="../../#about">What to Expect</a></li>
-				<li><a class="scroll" href="../../#team">About Us</a></li>
-				<li><a class="scroll" href="../../#price">Upcoming Meetings</a></li>
-				<li><a class="scroll" href="../../#contact">Contact</a></li>
-				<li><a class="scroll" href="#"><%= link_to 'Blog', blogs_path, method: :get  %></a></li>
-				<li><a class="scroll" href="../../#blog">Latest Blog Posts</a></li>
+				<li><a class="scroll" href="#"><%= link_to 'Home', url_for('../../'), method: :get %></a></li>
+				<li><a class="scroll" href="#"><%= link_to 'New Post', new_blog_path, method: :get %></a></li>
+				<li><a class="scroll" href="#"><%= link_to 'All Posts', @blog, method: :get  %></a></li>
+				<li><a class="scroll" href="#"><%= link_to 'Contact', url_for('../../#contact'), method: :get  %></a></li>
 			</ul>
 			<!--//MENU-->
 		<!--RESPONSIVE TOGGLE-->
