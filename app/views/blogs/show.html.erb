@@ -1,5 +1,7 @@
+<div style="margin:50px 0 0 50px;" class="jumbotron">
 <p id="notice"><%= notice %></p>
-
+</div>
+<div style="margin-left:50px;" class="well">
 <p>
   <strong>Title:</strong>
   <%= @blog.title %>
@@ -15,3 +17,4 @@
 <%= link_to 'Back', blogs_path, method: :get %>
 <br>
 <%= link_to 'Go Back To Home Page', url_for('../../'), method: :get %>
+</div>

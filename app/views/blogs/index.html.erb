@@ -7,6 +7,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th><%= "................" %></th>
       <th>Message</th>
       <th colspan="3"></th>
     </tr>
@@ -16,9 +17,11 @@
     <% @blogs.each do |blog| %>
       <tr>
         <td><%= blog.title %></td>
+        <td><%= "................" %></td>
         <td><%= blog.message %></td>
-        <td><%= link_to 'Show', blog, method: :get %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog), method: :get %></td>
+        <td><%= "................" %></td>
+        <td><%= link_to 'Show', blog, method: :get %>|</td>
+        <td><%= link_to 'Edit', edit_blog_path(blog), method: :get %>|</td>
         <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -28,6 +31,6 @@
 <br>
 
 <%= link_to 'New Blog', new_blog_path, method: :get %>
-
+<br>
 <%= link_to 'Go Back To Home Page', url_for('../../'), method: :get %>
 </div>

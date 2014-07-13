@@ -28,7 +28,7 @@
 			    <!-- TODO: change 'href' links to 'link_to' -->
 				<li><a class="scroll" href="#"><%= link_to 'Home', url_for('../../'), method: :get %></a></li>
 				<li><a class="scroll" href="#"><%= link_to 'New Post', new_blog_path, method: :get %></a></li>
-				<li><a class="scroll" href="#"><%= link_to 'All Posts', @blog, method: :get  %></a></li>
+				<li><a class="scroll" href="#"><%= link_to 'All Posts', blogs_path, method: :get  %></a></li>
 				<li><a class="scroll" href="#"><%= link_to 'Contact', url_for('../../#contact'), method: :get  %></a></li>
 			</ul>
 			<!--//MENU-->
