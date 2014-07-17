@@ -1,30 +1,4 @@
-</div>
-<!--HEADER-->
-    <div id="header"> 
-      <div class="col-sm-12 col-lg-12">
-        <div class="row">
-      <!--LOGO--> 
-    <div id="logo">
-      <a class="scroll" href="#home"><img src="img/logo.png" alt="" /></a>
-    </div>
-      <!--//LOGO-->
-  <!--MENU-->
-      
-      <!--//MENU-->
-    <!--RESPONSIVE TOGGLE-->
-    <div id="nav-toggle">
-      <i class="fa fa-bars"></i>
-    </div>
-  <!--//RESPONSIVE TOGGLE-->
-    </div>
-  </div>
-    </div>
-    <!--//HEADER-->
-    
-    <div class="pad90"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-lg-12">
+          <div style="margin: 70px;">
             <h1 class="wow fadeInRightBig" data-wow-duration="2s" data-wow-delay="1s">
               Our blog
             </h1>
@@ -42,14 +16,7 @@
     <br>
     <!-- 1-->
     <% @blogs.each do |blog| %>
-      <div id="big" class="owl-carousel blog-carousel-bottom">
-              <div class="item">
-         <img src="img/blog/1.jpg" alt="">
-      </div>
-      <div class="item">
-        <img src="img/blog/2.jpg" alt="">
-      </div>
-      </div>
+      
         <h1 class="blog-title"><%= blog.title %></h1>
           <h6>
             <%= blog.created_at %>
@@ -76,14 +43,11 @@
             "Ruby is cool and rails is cool too!"
           </p>
         
-        <div class="pad10"></div>
-        
-      
-        
-        <div class="pad25"></div>
+       
         
       </aside>
     </div>
+  </div>
   </div>
   
   <!-- FUTURE PAGINATION ??--> 
