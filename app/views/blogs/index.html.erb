@@ -1,4 +1,5 @@
-          <div style="margin: 10px;">
+          <div>
+            <div style="margin:80px 0 0 80px;">
             <h1 class="wow fadeInRightBig" data-wow-duration="2s" data-wow-delay="1s">
               Our blog
             </h1>
@@ -6,14 +7,14 @@
               Success is no accident. It is hard work, <strong>perseverance</strong>, learning, sacrifice and most of all, 
               <span class="colour"><strong>love</strong></span> of what you are doing or <span class="colour">learning</span> to do. 
             </div>
+            </div>
           
-          <div class="row">
+          <div class="row" style="margin:20px 120px 40px 80px;">
         <div class="pad30"></div>
     <div class="col-md-8">
     <%= link_to 'New Blog Post', new_blog_path, method: :get %>
     <br>
-    <%= link_to 'Go Back To Home Page', url_for('../../'), method: :get %>
-    <br>
+  
     <!-- 1-->
     <div>
     <% @blogs.each do |blog| %>
@@ -33,24 +34,10 @@
     
     <!-- sidebar -->
       
-      <div class="col-md-3 col-md-offset-1">
-    <aside>
-      <div class="input-group">
-        <input class="form-control" placeholder="Search - not working yet" name="s" id="s" type="text">
-      </div>
-        
-      <div class="pad30"></div> 
-        <h6>Quote of the week</h6>
-          <p>
-            "Ruby is cool and rails is cool too!"
-          </p>
-        
-       
-        
-      </aside>
-    </div>
   </div>
   </div>
+
   
   <!-- FUTURE PAGINATION ??--> 
+
  

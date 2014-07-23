@@ -26,13 +26,14 @@
 		<!--MENU-->
 			<ul id="menu">
 			    <!-- TODO: change 'href' links to 'link_to' -->
-				<li><a class="scroll" href="../../#home">Home</a></li>
-				<li><a class="scroll" href="../../#about">What to Expect</a></li>
-				<li><a class="scroll" href="../../#team">About Us</a></li>
-				<li><a class="scroll" href="../../#price">Upcoming Meetings</a></li>
-				<li><a class="scroll" href="../../#contact">Contact</a></li>
+				<li><a class="scroll" href="#"><%= link_to 'Home', root_path, method: :get  %></a></li>
+				<li><a class="scroll" href="#"><%= link_to 'What to Expect', root_path + '#about', method: :get  %></a></li>
+				<li><a class="scroll" href="#"><%= link_to 'Who we are', root_path + '#team', method: :get  %></a></li>
+				<li><a class="scroll" href="#"><%= link_to 'Upcoming Meetings', root_path + '#price', method: :get  %></a></li>
+				<li><a class="scroll" href="#"><%= link_to 'Contact', root_path + '#contact', method: :get  %></a></li>
+				<li><a class="scroll" href="../../#blog"><%= link_to 'Latest Posts', root_path + '#blog', method: :get  %></a></li>
 				<li><a class="scroll" href="#"><%= link_to 'Blog', blogs_path, method: :get  %></a></li>
-				<li><a class="scroll" href="../../#blog">Latest Blog Posts</a></li>
+				<li><a class="scroll" href="#"><%= link_to 'Sign Up', new_user_path, method: :get  %></a></li>
 			</ul>
 			<!--//MENU-->
 		<!--RESPONSIVE TOGGLE-->
@@ -45,22 +46,18 @@
 		</div>
 		<!--//HEADER-->
 
-	<%= yield %> <!-- Need to update header links for blog -->
-							
+	<%= yield %> 
+						
 							<!--START FOOTER--> 		
 								<footer>				
 								
 								<div class="center footer">
 								<!-- UP TO TOP -->	
-										<div class=" scroll wow bounceInDown" data-wow-duration="2s">
-										<img src='/assets/images/ruby.png' class="heart wow"/>
-										</div>
-										
-										
-									<br>
 
-									<div id="copyright" class="wow bounceIn" data-wow-offset="80" data-wow-duration="2s">Kansas City</div>
-									<%= link_to 'Ruby Users Group', url_for('../../'), method: :get %>
+									<div id="copyright" class="wow bounceIn" data-wow-offset="80" data-wow-duration="2s"><%= link_to 'Ruby Users Group', url_for('../../'), method: :get %></div>
+									
+
+									<div id="copyright" class="wow">Kansas City</div>
 								</div>
 							</div>
 						</footer>

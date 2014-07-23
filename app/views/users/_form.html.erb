@@ -10,16 +10,22 @@
       </ul>
     </div>
   <% end %>
+        <div style="text-align:left;">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+          <%= f.label :email %>
+          <%= f.text_field :email %>
+
+          <%= f.label :password  %>
+          <%= f.password_field :password %>
+
+          <%= f.label :password_confirmation, "Confirmation" %>
+          <%= f.password_field :password_confirmation %>
+
+          <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+          <br>
+          <%= link_to 'Back', blogs_path, method: :get %>
+        </div>
+          
+  <% end %>

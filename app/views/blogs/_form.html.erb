@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+<div style="max-width:50%;margin:auto;">
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -24,8 +25,9 @@
     <%= f.number_field :user_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create New Post", class: "btn btn-large btn-primary" %>
   </div>
+</div>
 <% end %>
 
 

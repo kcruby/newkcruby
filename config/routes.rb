@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :blogs
+  match '/signup',  to: 'users#new',  via: 'get'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

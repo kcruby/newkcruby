@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  layout 'blog_header_footer'
+  layout 'application'
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
   # GET /blogs
   # GET /blogs.json
