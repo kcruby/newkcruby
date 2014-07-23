@@ -1,4 +1,4 @@
- <div style="margin: 10px;">
+ <div style="margin: 80px;">
             <h1 class="wow fadeInRightBig" data-wow-duration="2s" data-wow-delay="1s">
               KcRuby Users
             </h1>
@@ -8,47 +8,21 @@
             </div>
           
           <div class="row">
-        <div class="pad30"></div>
-    <div class="col-md-8">
-    <%= link_to 'Sign Up', new_user_path, method: :get %>
-    <br>
-    <%= link_to 'Go Back To Home Page', url_for('../../'), method: :get %>
-    <br>
+    <div class="row">
+    
     <!-- 1-->
     <div>
-    <tbody>
     <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= user.email %></td>
-        <td><%= link_to 'Show', user, method: :get  %></td>
-        <td><%= link_to 'Edit', edit_user_path(user), method: :get  %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div style="margin:20px;">
+        <img style="margin-bottom:10px;">
+        <%= gravatar_for user %></img>
+        <p><%= user.name %></p>
+        <br>
+    </div>
     <% end %>
-  </tbody>
-          
-      <div class="pad45"></div>    
-    </div>
-    
-    <!-- sidebar -->
-      
-      <div class="col-md-3 col-md-offset-1">
-    <aside>
-      <div class="input-group">
-        <input class="form-control" placeholder="Search - not working yet" name="s" id="s" type="text">
+ 
+           
       </div>
-        
-      <div class="pad30"></div> 
-        <h6>Quote of the week</h6>
-          <p>
-            "Ruby is cool and rails is cool too!"
-          </p>
-        
-       
-        
-      </aside>
     </div>
   </div>
-  </div>
-  </div>
+</div>
