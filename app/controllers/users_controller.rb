@@ -29,6 +29,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        sign_in @user
+        flash[:success] = "Welcome to the KCRuby!"
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -37,6 +39,7 @@ class UsersController < ApplicationController
       end
     end
   end
+  
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json

@@ -1,0 +1,19 @@
+<h1 class="wow fadeInRightBig" data-wow-duration="2s" data-wow-delay="0.2s" style="margin:50px;text-align:center;">Sign-in</h1>
+
+
+<div class="row" style="min-width:200px;margin:5% 30%;">
+  <div>
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+    <p>New user? <%= link_to "Sign up now!", signup_path, method: :get %></p>
+  </div>
+</div>  
