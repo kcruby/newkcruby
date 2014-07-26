@@ -7,12 +7,16 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
 
+
   resources :users
   resources :blogs
   resources :sessions, only: [:new, :create, :destroy]
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

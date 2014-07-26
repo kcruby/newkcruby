@@ -200,9 +200,15 @@
 	
 	<!--//MP4 VIDEO SECTION STARTS-->
 	<section  class="wallpapered video-section" data-wallpaper-options='
-	{"source":{
-	"mp4":"/assets/images/clouds.mp4"
+	{"source":
+	{"mp4":"/assets/images/clouds.mp4"
 	}}'>
+	<!--//Mute Wallpaper-->
+	<script>$('section').wallpaper({
+   //... initialization parameters
+}).on('wallpaper.loaded', function(){
+  $('video', this).prop('muted', true);
+});</script>
 	<div class="video_overlay">	
 		<div id="video_content">
 			<div class="col-sm-12 col-lg-10 col-lg-offset-1 text-center wow fadeInUp" data-wow-offset="80" data-wow-duration="2s">
