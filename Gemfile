@@ -8,6 +8,8 @@ gem 'sqlite3', group: [:development, :test]
 
 gem 'mail_form'
 
+gem 'mandrill-api'
+
 gem 'simple_form'
 
 gem 'pg'

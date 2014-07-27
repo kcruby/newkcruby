@@ -33,7 +33,7 @@
 				<% if signed_in? %>
                  <li><a class="scroll" href="#"><%= link_to "Users", '#' %></a></li>
                 <li><a class="scroll" href="#"><%= link_to "Profile", current_user, method: :get %></a></li>
-                <li><a class="scroll" href="#"><%= link_to "Settings", '#' %></a></li>
+                <li><a class="scroll" href="#"><%= link_to "Settings", edit_user_path(current_user) %></a></li>
                 <li><a class="scroll" href="#">
                   <%= link_to "Sign out", signout_path, method: "delete" %></a>
                 </li>
