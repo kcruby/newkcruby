@@ -11,18 +11,14 @@
     <div class="row">
     
     <!-- 1-->
-    <%= will_paginate %>
+<%= will_paginate %>
 
 <ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= gravatar_for user %>
-      <%= link_to user.name, user %>
-    </li>
-  <% end %>
+  <%= render @users %>
 </ul>
 
 <%= will_paginate %>
+
     </div>
   </div>
 </div>
