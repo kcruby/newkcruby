@@ -1,4 +1,4 @@
-<div style="min_width:200px;margin:0 20% 0 20%;">
+<div style="min_width:200px;margin:0 20% 20% 20%;">
 <h1 style="margin:40px 0 40px 0;text-align:center;">Edit Profile</h1>
 
 <%= form_for(@user) do |f| %>
@@ -30,5 +30,3 @@
           <a href="http://gravatar.com/emails">change gravatar</a>
   <% end %>
 </div>
-<%= link_to 'Show', @user, method: :get  %> |
-<%= link_to 'Back', users_path, method: :get  %>

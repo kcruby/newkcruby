@@ -10,6 +10,12 @@ gem 'mail_form'
 
 gem 'mandrill-api'
 
+gem 'will_paginate'
+
+gem 'bootstrap-will_paginate'
+
+gem 'faker', '1.4.2'
+
 gem 'simple_form'
 
 gem 'pg'

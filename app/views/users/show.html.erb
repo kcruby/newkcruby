@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <% provide(:title, @user.name) %>
-<div class="row">
+<div class="row" style="margin:10% 0 15% 5%;">
   <aside class="span4">
     <section>
       <h1 style="margin:100px;">
@@ -11,6 +11,4 @@
   </aside>
 </div>
 
-<%= link_to 'Edit', edit_user_path(@user), method: :get  %> |
-<%= link_to 'Back', users_path, method: :get  %>
 

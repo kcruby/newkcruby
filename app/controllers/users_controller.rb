@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :signed_in_user, only: [:edit, :update]
+  before_action :signed_in_user, only: [:index, :edit, :update]
   before_action :correct_user,   only: [:edit, :update]
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.paginate(page: params[:page])
   end
 
   # GET /users/1

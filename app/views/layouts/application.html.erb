@@ -31,7 +31,7 @@
 				<li><a class="scroll" href="#"><%= link_to 'Contact', root_path + '#contact', method: :get  %></a></li>
 				<li><a class="scroll" href="#"><%= link_to 'Latest Posts', root_path + '#blog', method: :get  %></a></li>
 				<% if signed_in? %>
-                 <li><a class="scroll" href="#"><%= link_to "Users", '#' %></a></li>
+                 <li><a class="scroll" href="#"><%= link_to "Users", users_path, method: :get %></a></li>
                 <li><a class="scroll" href="#"><%= link_to "Profile", current_user, method: :get %></a></li>
                 <li><a class="scroll" href="#"><%= link_to "Settings", edit_user_path(current_user) %></a></li>
                 <li><a class="scroll" href="#">
