@@ -11,6 +11,7 @@
   <strong>Message:</strong>
   <%= @blog.message %>
 </p>
+
 <% if @blog.user == current_user %>
 <%= link_to 'Edit', edit_blog_path(@blog), method: :get %>
 <% end %>

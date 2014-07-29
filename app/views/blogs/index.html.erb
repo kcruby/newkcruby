@@ -27,6 +27,12 @@
           <p>
             <%= blog.message %> 
           </p> 
+          <p>
+            <em>written by &nbsp;&nbsp;</em><%= blog.user.name %>
+          </p>
+          <% if blog.user == current_user %>
+<%= link_to 'Edit', edit_blog_path(blog), method: :get %>
+<% end %>
           
       <div class="pad45"></div>  
       <% end %>    
