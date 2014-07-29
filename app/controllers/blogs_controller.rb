@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
   layout 'application'
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+
   # GET /blogs
   # GET /blogs.json
   def index
@@ -19,13 +20,15 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1/edit
   def edit
+    @blog = current_user.blogs.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      redirect_to blogs_path, notice: "You cannot edit this event."
   end
 
   # POST /blogs
   # POST /blogs.json
   def create
-    @blog = Blog.new(blog_params)
-
+    @blog = current_user.blogs.build(blog_params)
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }

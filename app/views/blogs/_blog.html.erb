@@ -1,0 +1,10 @@
+<li>
+  <span class="title"><%= blog.title %></span>
+  <span class="message"><%= blog.message %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(blog.created_at) %> ago.
+  </span>
+  <% if blog.user == current_user %>
+<%= link_to 'Edit', edit_blog_path(blog), method: :get %>
+<% end %>
+</li>

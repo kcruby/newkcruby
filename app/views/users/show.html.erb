@@ -9,6 +9,16 @@
       </h1>
     </section>
   </aside>
+  <div class="span8">
+    <% if @user.blogs.any? %>
+      <h3>Blogs (<%= @user.blogs.count %>)</h3>
+      <ol class="blogs">
+        <%= render @blogs %>
+      </ol>
+      <br>
+      <%= will_paginate @blogs %>
+    <% end %>
+  </div>
 </div>
 
 
