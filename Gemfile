@@ -18,7 +18,7 @@ gem 'faker', '1.4.2'
 
 gem 'simple_form'
 
-gem 'pg'
+gem 'pg',        group: :production
 
 gem "font-awesome-rails"
 
