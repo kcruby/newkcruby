@@ -320,22 +320,18 @@
 						<div class="contact_form">  
 							<div id="note"></div>
 							<div id="fields">
-							<form id="ajax-contact-form">
 							<%= simple_form_for Contact.new, :html => {:id => 'ajax-contact-form' } do |f| %>
 
     <%= f.input :name, :class => "col-xs-12 col-md-12" %>
-    <%= f.input :email %>
+    <%= f.input :email, :class => "col-xs-12  col-md-12" %>
+    <%= f.input :subject, :class => "col-xs-12  col-md-12" %>
     <%= f.input :message, :as => :text, :class => "col-xs-12  col-md-12" %>
-    <div id= "hidden">
-      <%= f.input :nickname, :hint => 'Leave this field blank!', :id => "hidden" %>
-    </div>
     <div class="clear"></div>
       </br>
       <%= f.button :submit, 'Send message', :class=> "btn marg-right10" %>
     <div class="clear"></div>
   <% end %>
-							<div class="clear"></div>
-							</form>  
+							<div class="clear"></div>  
 						</div>
 					</div> 
 				<!-- // End FORM -->	
