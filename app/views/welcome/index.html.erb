@@ -245,9 +245,13 @@
             <em>written by &nbsp;&nbsp;</em><%= blog.user.name %>
           </p>
          <% if blog.user == current_user %>
-			<%= link_to 'Edit', edit_blog_path(blog), method: :get %>&nbsp;|&nbsp;
+			<%= link_to 'edit', edit_blog_path(blog), method: :get %>&nbsp;|&nbsp;
+			<%= link_to 'delete', blog, method: :delete,
+         data: { confirm: "You sure?" }%>&nbsp;|&nbsp;
+
 			<% end %>
-			<% end %>
+	<% end %>
+
 
 					<%= link_to 'Go To Blog Forum', url_for('/blogs'), method: :get %>
 					
