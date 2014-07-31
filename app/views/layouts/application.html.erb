@@ -30,7 +30,7 @@
 				<li><a class="scroll" href="#"><%= link_to 'Home', root_path, method: :get  %></a></li>
 				<li><a class="scroll" href="#"><%= link_to 'Upcoming Meetings', root_path + '#price', method: :get  %></a></li>
 				<li><a class="scroll" href="#"><%= link_to 'Contact', root_path + '#contact', method: :get  %></a></li>
-				<li><a class="scroll" href="#"><%= link_to 'Latest Posts', root_path + '#blog', method: :get  %></a></li>
+				<li><a class="scroll" href="#"><%= link_to 'Blog', root_path + 'blogs', method: :get  %></a></li>
 				<% if signed_in? %>
                  <li><a class="scroll" href="#"><%= link_to "Users", users_path, method: :get %></a></li>
                 <li><a class="scroll" href="#"><%= link_to "Profile", current_user, method: :get %></a></li>
@@ -41,8 +41,8 @@
               </ul>
             </li>
           <% else %>
-          		<li><a class="scroll" href="#"><%= link_to 'What to Expect', root_path + '#about', method: :get  %></a></li>
-				<li><a class="scroll" href="#"><%= link_to 'Who we are', root_path + '#team', method: :get  %></a></li>
+          		<li><a class="scroll" href="#"><%= link_to 'What to Expect', root_path + '#about', method: :get  %></a>&nbsp;&nbsp;&&nbsp;
+				<a class="scroll" href="#"><%= link_to 'Who we are', root_path + '#team', method: :get  %></a></li>
             <li><a class="scroll" href="#"><%= link_to "Sign in", signin_path, method: :get %></a></li>
             <li><a class="scroll" href="#"><%= link_to 'Sign Up', new_user_path, method: :get  %></a></li>
           <% end %>
