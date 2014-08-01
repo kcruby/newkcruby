@@ -1,15 +1,21 @@
 <p id="notice"><%= notice %></p>
 <% provide(:title, @user.name) %>
-<div class="row" style="margin:10% 0 15% 5%;">
+<div class="row" style="margin:10% 0 5% 5%;">
   <aside class="span4">
     <section>
-      <h1 style="margin:100px;">
+      <h1 style="margin:20px;">
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
     </section>
   </aside>
   <div class="span8">
+  <div class="jumbotron">
+  <aside>
+  <h2>bio</h2>
+  <%= @user.bio %>
+  </aside>
+  </div>
     <% if @user.blogs.any? %>
       <h3>Blogs (<%= @user.blogs.count %>)</h3>
       <ol class="blogs">

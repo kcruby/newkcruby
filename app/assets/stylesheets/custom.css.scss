@@ -128,14 +128,15 @@ text-align: left;
 }
 .message {
   display: block;
-  color: gray;
+  color: black;
 }
 .title {
   display: block;
   color: black;
+  font-weight:900;
 }
 .timestamp {
-  color: lightgray;
+  color: darkgray;
 }
 .gravatar {
   float: left;
@@ -152,4 +153,15 @@ abbr[title='required'] {
   border-bottom: none;
 }
 
+.go_to_red {
+  color: #FF321B;
+}
+
+.slant {
+    -moz-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(30deg, 0deg);
+    -webkit-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(30deg, 0deg);
+    -o-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(30deg, 0deg);
+    -ms-transform: scale(1) rotate(0deg) translate(0px, 0px) skew(30deg, 0deg);
+    transform: scale(1) rotate(0deg) translate(0px, 0px) skew(30deg, 0deg);
+}
 

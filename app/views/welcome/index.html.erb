@@ -238,7 +238,7 @@
             <%= blog.created_at.strftime("%b %d, %Y") %>
 
           </h6>       
-          <p>
+          <p class="message">
             <%= truncate(blog.message, length: 50, separator: ' ') %> &nbsp; <%= link_to 'Read more', blog_path(blog), method: :get %>
           </p> 
           <p>
@@ -251,10 +251,7 @@
 
 			<% end %>
 	<% end %>
-
-
-					<%= link_to 'Go To Blog Forum', url_for('/blogs'), method: :get %>
-					
+					<%= link_to 'Go To Blog Forum', url_for('/blogs'), :class => "go_to_red", method: :get %>
 				<div class="pad30"></div>
 			<div id="grid-container2" class="cbp-l-grid-blog pad90">
             </div>

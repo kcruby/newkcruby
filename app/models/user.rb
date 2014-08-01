@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 	has_secure_password
 
 	validates :password, length: { minimum: 6 }
+  validates :bio, length: { maximum: 500 }
 	
   def User.new_remember_token
     SecureRandom.urlsafe_base64
