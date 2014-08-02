@@ -7,15 +7,17 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <a href="http://www.github.com/<%= @user.email[/[^@]+/] %>"><i class="fa fa-github git_icon"></i></a>
     </section>
   </aside>
   <div class="span8">
-  <div class="jumbotron">
+  <div class="jumbotron bio">
   <aside>
   <h2>bio</h2>
   <%= @user.bio %>
   </aside>
   </div>
+                 
     <% if @user.blogs.any? %>
       <h3>Blogs (<%= @user.blogs.count %>)</h3>
       <ol class="blogs">
