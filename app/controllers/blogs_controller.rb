@@ -16,9 +16,11 @@ class BlogsController < ApplicationController
 
   # GET /blogs/new
   def new
-    
+    if current_user == nil 
+      redirect_to new_session_path
+    else
     @blog = Blog.new
- 
+    end
   end
 
   # GET /blogs/1/edit
