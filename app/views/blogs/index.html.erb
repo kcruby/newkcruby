@@ -12,7 +12,9 @@
           <div class="row" style="margin:20px 120px 40px 80px;">
         <div class="pad30"></div>
     <div class="col-md-8">
+    <% if current_user != nil %>
     <%= link_to 'New Blog Post', new_blog_path, method: :get %>
+    <% end %>
     <br>
   
     <!-- 1-->

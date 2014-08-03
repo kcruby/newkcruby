@@ -15,6 +15,9 @@ class UsersController < ApplicationController
     @blogs = @user.blogs.paginate(page: params[:page])
   end
 
+  def gallery
+  end
+
   # GET /users/new
   def new
     @user = User.new
@@ -22,6 +25,9 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @user = User.find(params[:id])
+    rescue ActiveRecord::RecordNotFound 
+      redirect_to root_path, notice: "This profile does not exist."
   end
 
   # POST /users

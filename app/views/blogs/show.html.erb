@@ -17,7 +17,7 @@
 
 <% if @blog.user == current_user %>
 <%= link_to 'edit', edit_blog_path(@blog), method: :get %>&nbsp;|&nbsp;
-      <%= link_to 'delete', blog, method: :delete,
+      <%= link_to 'delete', @blog, method: :delete,
          data: { confirm: "You sure?" }%>
 <% end %>
 
