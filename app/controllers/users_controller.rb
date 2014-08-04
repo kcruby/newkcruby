@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   end
 
   def gallery
+    redirect_to(root_url) unless signed_in?
   end
 
   # GET /users/new
