@@ -27,10 +27,14 @@
 		<!--MENU-->
 			<ul id="menu">
 			    <!-- TODO: Make home pagelinks ajax-->
+				
+
 				<li><a class="scroll" href="#"><%= link_to 'Home', root_path, method: :get  %></a></li>
 				<li><a class="scroll" href="#"><%= link_to 'Upcoming Meetings', root_path + '#price', method: :get  %></a></li>
 				<li><a class="scroll" href="#"><%= link_to 'Contact', root_path + '#contact', method: :get  %></a></li>
+
 				<li><a class="scroll" href="#"><%= link_to 'Blog', root_path + 'blogs', method: :get  %></a></li>
+
 				<% if signed_in? %>
                  <li><a class="scroll" href="#"><%= link_to "Users", users_path, method: :get %></a></li>
                  <li><a class="scroll" href="#"><%= link_to "Photos", root_path + 'gallery', method: :get %></a></li>

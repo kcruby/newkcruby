@@ -1,3 +1,5 @@
+        
+<% if current_page?('/blogs?page=1') %>
           <div>
             <div style="margin:80px 0 0 80px;">
             <h1 class="wow fadeInRightBig" data-wow-duration="2s" data-wow-delay="1s">
@@ -8,9 +10,24 @@
               <span class="colour"><strong>love</strong></span> of what you are doing or <span class="colour">learning</span> to do. 
             </div>
             </div>
-          
           <div class="row" style="margin:20px 120px 40px 80px;">
         <div class="pad30"></div>
+
+    <% else %>    
+    <div>
+            <div style="margin:80px 0 0 80px;">
+            <h1>
+              Our blog
+            </h1>
+            <div class="lead">
+              Success is no accident. It is hard work, <strong>perseverance</strong>, learning, sacrifice and most of all, 
+              <span class="colour"><strong>love</strong></span> of what you are doing or <span class="colour">learning</span> to do. 
+            </div>
+            </div>
+          <div class="row" style="margin:20px 120px 40px 80px;">
+        <div class="pad30"></div>
+  <% end %>
+
     <div class="col-md-8">
     <% if current_user != nil %>
     <%= link_to 'New Blog Post', new_blog_path, method: :get %>
@@ -19,35 +36,18 @@
   
     <!-- 1-->
     <div>
-    <% @blogs.each do |blog| %>
-      
-        <h1 class="blog-title"><%= blog.title %></h1>
-          <h6>
-            <%= blog.created_at.strftime("%b %d, %Y") %>
-
-          </h6>       
-          <p class="message">
-            <%= blog.message %> 
-          </p> 
-          <p>
-            <em>written by &nbsp;&nbsp;</em><%= blog.user.name %>
-          </p>
-          <% if blog.user == current_user %>
-<%= link_to 'edit', edit_blog_path(blog), method: :get %>&nbsp;|&nbsp;
-      <%= link_to 'delete', blog, method: :delete,
-         data: { confirm: "You sure?" }%>
-<% end %>
-          
-      <div class="pad45"></div>  
-      <% end %>    
+    <%= will_paginate %>
+    <%= render @blogs %>
+    <%= will_paginate %>
+        
+      <div class="pad45"></div>    
     </div>
     
     <!-- sidebar -->
       
   </div>
   </div>
-
   
-  <!-- FUTURE PAGINATION ??--> 
+ 
 
  
