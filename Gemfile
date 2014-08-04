@@ -8,6 +8,8 @@ gem 'sqlite3', group: [:development, :test]
 
 gem 'mail_form'
 
+
+
 gem 'mandrill-api'
 
 gem 'will_paginate'
@@ -18,7 +20,9 @@ gem 'faker', '1.4.2'
 
 gem 'simple_form'
 
-gem 'pg',        group: :production
+gem 'pg'
+
+gem 'rails_12factor',        group: :production
 
 gem "font-awesome-rails"
 
