@@ -22,7 +22,10 @@ gem 'simple_form'
 
 gem 'pg'
 
-gem 'rails_12factor',        group: :production
+
+group :production, :staging do
+      gem 'rails_12factor'
+end
 
 gem "font-awesome-rails"
 
