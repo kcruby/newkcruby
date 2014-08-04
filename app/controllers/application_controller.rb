@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
 
   def the_blog
     @blogs = Blog.all
-    @blog = Blog.find_by(params[:id])
   end
 
 end
