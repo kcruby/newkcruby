@@ -55,6 +55,9 @@ class UsersController < ApplicationController
   def update
 
     respond_to do |format|
+      # TODO: remove password field if not changing password on edit
+      # my_params = user_params
+      # if my_params.password == nil
       if @user.update_attributes(user_params)
         flash[:success] = "Profile updated"
         format.html { redirect_to @user }
