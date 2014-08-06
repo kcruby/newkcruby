@@ -23,11 +23,18 @@
           <%= f.label :bio %>
           <%= f.text_area :bio %>
 
+          <% if signed_in? && current_user == @user %>
+
+          <input id="passtoggle" type="button" value="change password" class="btn"></input>
+          <div id="passfield">
           <%= f.label :password %>
           <%= f.password_field :password %>
 
           <%= f.label :password_confirmation, "Confirmation" %>
           <%= f.password_field :password_confirmation %>
+          </div>
+
+          <% end %>
 
           <%= f.submit "Update my account", class: "btn btn-large btn-primary" %>
           <%= gravatar_for @user %>
