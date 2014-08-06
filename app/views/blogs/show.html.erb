@@ -1,14 +1,19 @@
-<div style="margin:50px 0 0 50px;">
+<div style="margin:50px 0 0 10px;">
 <p id="notice"><%= notice %></p>
 </div>
-<div style="margin:10% 10% 30% 10%;" class="jumbotron">
+<div style="margin:10%;" class="jumbotron">
 
 <h3 style="margin-bottom:30px;">
   <em class="title"><%= @blog.title %></em>
 </h3>
 
 <h4 style="margin-bottom:30px;">
-  <em>by&nbsp;</em><%= @blog.user.name %>
+  <em>by&nbsp;</em>
+  <% if signed_in? %>
+  <%= link_to @blog.user.name, user_path(@blog.user) %>
+  <% else %>
+  <%= @blog.user.name %>
+  <% end %>
 </h4>
 
 <p class="message">
