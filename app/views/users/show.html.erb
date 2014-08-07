@@ -3,11 +3,15 @@
 <div class="row" style="margin:10% 0 5% 5%;">
   <aside class="span4">
     <section>
-      <h1 style="margin:20px;">
-        <%= gravatar_for @user %>
+      <h2 style="margin:0 0 24px 50px;">
         <%= @user.name %>
-      </h1>
-      <a href="http://www.github.com/<%= @user.email[/[^@]+/] %>"><i class="fa fa-github git_icon"></i></a>
+      </h2>
+      <h2 style="margin:0 0 124px 50px;">
+        <%= gravatar_for @user %>  
+      </h2>
+      
+      <!-- Maybe add github link here -->
+
     </section>
   </aside>
   <div class="span8">
