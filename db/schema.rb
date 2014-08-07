@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140801182031) do
+ActiveRecord::Schema.define(version: 20140806191439) do
 
   create_table "blogs", force: true do |t|
     t.string   "title"
@@ -32,8 +32,11 @@ ActiveRecord::Schema.define(version: 20140801182031) do
     t.string   "remember_token"
     t.boolean  "admin"
     t.text     "bio"
+    t.boolean  "github",          default: false
+    t.string   "ghusername"
   end
 
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
 
 end

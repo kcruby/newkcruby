@@ -21,6 +21,9 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    if signed_in?
+        redirect_to root_path
+    end
     @user = User.new
   end
 
@@ -34,6 +37,9 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    if signed_in?
+        redirect_to root_path
+    end
     @user = User.new(user_params)
 
     respond_to do |format|
@@ -87,7 +93,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :bio, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :bio, :password, :password_confirmation, :github, :ghusername)
     end
 
     def correct_user

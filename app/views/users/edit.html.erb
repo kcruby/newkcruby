@@ -25,8 +25,9 @@
 
           <% if signed_in? && current_user == @user %>
 
-          <input id="passtoggle" type="button" value="change password" class="btn"></input>
-          <div id="passfield">
+          <a id="passtoggle">Change Password</a>
+
+          <div id="passfield" style="margin-top:20px;display:none">
           <%= f.label :password %>
           <%= f.password_field :password %>
 
@@ -36,7 +37,7 @@
 
           <% end %>
 
-          <%= f.submit "Update my account", class: "btn btn-large btn-primary" %>
+          <%= f.submit "Update my account", class: "btn btn-large btn-primary", style: "margin-top:20px;" %>
           <%= gravatar_for @user %>
           <a href="http://gravatar.com/emails">change gravatar</a>
   <% end %>
