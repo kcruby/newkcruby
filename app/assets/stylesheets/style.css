@@ -172,6 +172,11 @@ h4 { font-size: 20px; }
 h5 { font-size: 18px; }
 h6 { font-size: 16px; }	
 
+a,
+a label {
+    cursor: pointer;
+}
+
 .lead {
 	font-family:'Raleway', sans-serif; 
 	font-size: 36px;
