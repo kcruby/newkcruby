@@ -23,8 +23,9 @@
 <% if @blog.user == current_user %>
 <%= link_to 'edit', edit_blog_path(@blog), method: :get %>&nbsp;|&nbsp;
       <%= link_to 'delete', @blog, method: :delete,
-         data: { confirm: "You sure?" }%>
+         data: { confirm: "You sure?" }%>&nbsp;|&nbsp;
 <% end %>
+<%= link_to 'back', blogs_path(@blog), method: :get %>
 
 
 </div>
