@@ -11,9 +11,7 @@ class User < ActiveRecord::Base
 
 	validates :password, :presence => true, :confirmation => true, length: {minimum: 7}, :if => :password
   validates :bio, length: { maximum: 500 }
-  validates_inclusion_of :github, :in => [true, false]
 	
-
   def User.new_remember_token
     SecureRandom.urlsafe_base64
   end

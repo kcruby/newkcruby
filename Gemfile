@@ -8,7 +8,7 @@ gem 'sqlite3', group: [:development, :test]
 
 gem 'mail_form'
 
-
+gem 'rails_autolink'
 
 gem 'mandrill-api'
 

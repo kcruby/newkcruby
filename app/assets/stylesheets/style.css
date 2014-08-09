@@ -1132,3 +1132,21 @@ h1  { font-size: 60px!important; line-height:55px; letter-spacing:-1px!important
 .name, .byline { font-size:12px; }
 .wallpapered h2 { font-size:32px!important; line-height:40px; margin:50% auto 0; padding:0 0; width:100%; }
 }
+
+
+.alert {
+   font-weight: bold;
+   color:#EB5546;
+   text-align: center;
+   width: 40%;
+   margin: 0 auto;
+   border:2px solid #EB6A5B;
+   -moz-border-radius: 4px 4px 4px 4px;
+   -webkit-border-radius: 4px 4px 4px 4px;
+   border-radius: 4px 4px 4px 4px;
+   margin-bottom: 18px;
+   padding: 12px 25px 12px 24px;
+   -moz-box-shadow: 3px 3px 1px 1px #CCCCCC;
+   -webkit-box-shadow: 3px 3px 1px 1px #CCCCCC;
+   box-shadow: 3px 3px 1px 1px #CCCCCC;
+}
