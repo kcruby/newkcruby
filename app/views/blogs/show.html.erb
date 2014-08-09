@@ -17,7 +17,7 @@
 </h4>
 
 <p class="message">
-  <%= @blog.message %>
+  <%= auto_link(@blog.message) %>
 </p>
 
 <% if @blog.user == current_user %>
