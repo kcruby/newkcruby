@@ -221,8 +221,14 @@
           <p class="message">
             <%= truncate(blog.message, length: 50, separator: ' ') %> &nbsp; <%= link_to 'Read more', blog_path(blog), method: :get %>
           </p> 
+         
           <p>
-            <em>written by &nbsp;</em><%= link_to blog.user.name, user_path(blog.user) %>
+            <em>written by &nbsp;</em>
+            <% if signed_in? %>
+            <%= link_to blog.user.name, user_path(blog.user) %>
+            <% else %>
+            <%= blog.user.name %>
+            <% end %>
           </p>
          <% if blog.user == current_user %>
 			<%= link_to 'edit', edit_blog_path(blog), method: :get %>&nbsp;|&nbsp;
