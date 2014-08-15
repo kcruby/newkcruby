@@ -61,9 +61,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     params[:user].delete(:password) if params[:user][:password].blank?
-    if (@user.update_attribute(:name, params[:user][:name])     && 
-        @user.update_attribute(:email, params[:user][:email])   &&
-        @user.update_attribute(:bio, params[:user][:bio]))
+    if all_of_the_user_fields_could_be_updated
        
       flash[:success] = "Edit Successful."
       redirect_to @user
@@ -72,6 +70,13 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
+
+  def all_of_the_user_fields_could_be_updated
+    @user.update_attribute(:name,  params[:user][:name])  &&
+    @user.update_attribute(:email, params[:user][:email]) &&
+    @user.update_attribute(:bio,   params[:user][:bio])
+  end
+
 
   # DELETE /users/1
   # DELETE /users/1.json
