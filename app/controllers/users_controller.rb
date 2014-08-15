@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   def index
     @users = User.paginate(page: params[:page], per_page: 10)
   end
-  
 
   # GET /users/1
   # GET /users/1.json
@@ -23,7 +22,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     if signed_in?
-        redirect_to root_path
+      redirect_to root_path
     end
     @user = User.new
   end
@@ -32,14 +31,14 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
     rescue ActiveRecord::RecordNotFound 
-      redirect_to root_path, notice: "This profile does not exist."
+    redirect_to root_path, notice: "This profile does not exist."
   end
 
   # POST /users
   # POST /users.json
   def create
     if signed_in?
-        redirect_to root_path
+      redirect_to root_path
     end
     @user = User.new(user_params)
 
@@ -55,7 +54,6 @@ class UsersController < ApplicationController
       end
     end
   end
-  
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
@@ -96,7 +94,6 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :bio, :password, :password_confirmation, :github, :ghusername)
@@ -106,7 +103,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
-    
+
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
