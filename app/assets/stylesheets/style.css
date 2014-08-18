@@ -50,7 +50,8 @@ iframe { border: 0 none; }
 input{ -webkit-appearance: none; }
 .wow:nth-child(1), .wow:nth-child(2), .wow:nth-child(3), .wow:nth-child(4), .wow:nth-child(5), .wow:nth-child(6)  { visibility: hidden; }
 .fa-li { margin-left:-8px; padding-top:2px; }
-.container { overflow: hidden; }
+.container { overflow: hidden }
+#blog_container { border-top:5px solid gray; margin-top: 50px; }
 
 /**** LINKS ****/
 a {
@@ -695,11 +696,13 @@ section.wallpapered.video-section { height:420px; }
 }
 .price .amt {font-size:110px; line-height: 84px; }
 .price .mo { font-size:14px; text-transform:uppercase; letter-spacing:1px; }
-.price > p { font-size:11px; line-height:16px; margin-top:14px; color:#bbb; }
-#pricing .info-wrapper { padding:20px 20px 0; border:1px solid #555; margin-bottom:40px; }
+.price > p { font-size:11px; line-height:16px; margin-top:14px; color:#bbb;  }
+#pricing .info-wrapper { padding:20px 20px 0; border:1px solid #555; margin-bottom:50px; }
 #pricing .info-wrapper  ul li { font-size: 14px;border-bottom:1px dashed #ddd; padding:10px 0; }
 #pricing .list-group { list-style-type:none; color:#555; }
 #pricing .btn { border:20px solid #F0F0F0; margin:0 auto -40px; font-size:12px; text-align:center; }
+
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	07: CONTACT SECTION
