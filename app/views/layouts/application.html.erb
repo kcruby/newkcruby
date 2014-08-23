@@ -20,7 +20,7 @@
 				<div class="row">
 			<!--LOGO-->	
 		<div id="logo">
-			<a class="scroll" href="#home"><img src="/assets/images/logo.png" alt="logo" /></a>
+			<a class="scroll" href="#home"><img class="ruby wow pulse" data-wow-iteration="infinite" src="/assets/images/ruby.png" alt="logo" /></a>
 		</div>
 			<!--//LOGO-->
 		
@@ -64,7 +64,7 @@
 				<a class="scroll" href="#team">Who we are</a></li>
             
 			<% else %>
-
+				<script>WOW();</script>
 				<li><a class="scroll" href="#"><%= link_to 'What to Expect', root_path + '#about', method: :get  %></a>&nbsp;&nbsp;&&nbsp;
 				<a class="scroll" href="#"><%= link_to 'Who we are', root_path + '#team', method: :get  %></a></li>
 
