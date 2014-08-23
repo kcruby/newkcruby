@@ -291,7 +291,11 @@ body.royal_loader { background: none!important; visibility: hidden!important; }
 #logo{ padding: 22px 0px 0 60px; overflow: hidden; float: left; }
 
 .ruby {
- margin: 10%;
+     margin: 10%;
+}
+
+.line_height {
+	 line-height: 1.5; 
 }
 
 #nav-toggle {
