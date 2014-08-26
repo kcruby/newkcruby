@@ -440,6 +440,8 @@ body.royal_loader { background: none!important; visibility: hidden!important; }
 .kclogo {
   	position: relative;
   	margin: 0px auto 0px;
+    max-height: 250px;
+    min-height: 100px;
 	-webkit-transform-origin: center center;
 	-moz-transform-origin: center center;
 	-ms-transform-origin: center center;
