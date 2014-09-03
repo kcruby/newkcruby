@@ -9,12 +9,16 @@
   <meta name="author" content="">
   <link rel="icon" type="image/ico" href="/assets/images/favicon.ico">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= google_maps_api %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=API_KEY"
+      src="https://maps.googleapis.com/maps/api/js?key=gm_api_key"
       >
     </script>
     <script type="text/javascript">
