@@ -14,4 +14,5 @@
 //= require lightbox.min
 //= require jquery_ujs
 //= require turbolinks
+//= require gmap3
 //= require_tree .
