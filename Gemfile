@@ -8,6 +8,8 @@ gem 'sqlite3', group: [:development, :test]
 
 gem 'mail_form'
 
+gem 'jquery-gmap3-rails'
+
 gem 'rails_autolink'
 
 gem 'mandrill-api'
