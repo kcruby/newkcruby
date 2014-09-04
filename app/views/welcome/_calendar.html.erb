@@ -34,7 +34,7 @@
 		<script type="text/javascript">
 		    $(".google-maps").gmap3({
 			marker:{
-			address:"#{result["venue"]["address_1"]},#{result["venue"]["city"]},#{result["venue"]["state"]}",
+			address:"#{result["venue"]["address_1"].to_json},#{result["venue"]["city"].to_json},#{result["venue"]["state"].to_json}",
 			options:{ icon: "img/marker.png"}},
 			map:{
 			options:{
