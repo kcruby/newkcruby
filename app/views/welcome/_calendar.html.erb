@@ -32,7 +32,7 @@
 				</div>
 
 		<script type="text/javascript">
-		    <% g_address = @meetup[0]["venue"]["address_1"] + "," + @meetup[0]["venue"]["city"] + "," + @meetup[0]["venue"]["state"] %>
+		    <% g_address = @meetup["results"][0]["venue"]["address_1"] + "," + @meetup["results"][0]["venue"]["city"] + "," + @meetup["results"][0]["venue"]["state"] %>
 		    $(".google-maps").gmap3({
 			marker:{
 			address:"<%= g_address %>",
