@@ -4,9 +4,9 @@ class WelcomeController < ApplicationController
 
   def index
   	@meetup = JSON.parse(meetup)
-    @g_address = @meetup["results"]["venue"]["address_1"].to_json
-    @g_city = @meetup["results"]["venue"]["city"].to_json
-    @g_state = @meetup["results"]["venue"]["state"].to_json
+    @g_address = result["venue"]["address_1"]
+    @g_city = result["venue"]["city"]
+    @g_state = result["venue"]["state"]
   end
 
 
