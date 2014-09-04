@@ -161,16 +161,16 @@
         <script type="text/javascript">
 		    $(".google-maps").gmap3({
 			marker:{
-			address:"#{@meetup['results']['venue']['address_1']}", "#{@meetup['results']['venue']['city']}", "#{@meetup['results']['venue']['state']}",
-			options:{ icon: "images/logo.png"}},
+			address:"1 Infinite Loop, Cupertino, California",
+			options:{ icon: "img/marker.png"}},
 			map:{
 			options:{
 			styles: [ {
 			stylers: [ { "saturation":-100 }, { "lightness": 0 }, { "gamma": 0.5 }]},
 			],
 			zoom: 17,
-			scrollwheel:true,
-			draggable: true }
+			scrollwheel:false,
+			draggable: false }
 			}
 			});
 		</script>
