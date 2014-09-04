@@ -4,6 +4,9 @@ class WelcomeController < ApplicationController
 
   def index
   	@meetup = JSON.parse(meetup)
+    @g_address = @meetup["results"]["venue"]["address_1"].to_json
+    @g_city = @meetup["results"]["venue"]["city"].to_json
+    @g_state = @meetup["results"]["venue"]["state"].to_json
   end
 
 
@@ -16,10 +19,6 @@ class WelcomeController < ApplicationController
   	}
   	return res.body
   end
-
-  g_address = @meetup["results"]["venue"]["address_1"].to_json
-  g_city = @meetup["results"]["venue"]["city"].to_json
-  g_state = @meetup["results"]["venue"]["state"].to_json
 
 	def gm_api_key
     "AIzaSyATeCy88iCOqi_TdWAb8EJ1WavvGHP2e1c"
