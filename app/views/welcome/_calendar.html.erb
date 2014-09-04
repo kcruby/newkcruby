@@ -34,7 +34,7 @@
 		<%= javascript_tag do %>
 		    $(".google-maps").gmap3({
 			marker:{
-			address:<%= result[:venue][:address_1] %>, <%= result[:venue][:city] %>, <%= result[:venue][:state] %>,
+			address: "1901 Main St", "San Diego", "California",
 			options:{ icon: "img/marker.png"}},
 			map:{
 			options:{
@@ -46,7 +46,7 @@
 			draggable: false }
 			}
 			});
-		<% end %>
+	    <%= end %>
 
 
 <% end %>
