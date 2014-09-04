@@ -31,11 +31,15 @@
 					</div>
 				</div>
 
+				<% addr = result["venue"]["address_1"] %>
+				<% city = result["venue"]["city"] %>
+				<% state = result["venue"]["state"] %>
+				<% full_addr = addr + "," + city + "," + state %>
+
 		<script type="text/javascript">
-		    <% g_address = @meetup.first["venue"]["address_1"] + "," + @meetup.first["venue"]["city"] + "," + @meetup.first["venue"]["state"] %>
 		    $(".google-maps").gmap3({
 			marker:{
-			address:"<%= g_address %>",
+			address:"<%= full_addr %>",
 			options:{ icon: "img/marker.png"}},
 			map:{
 			options:{
