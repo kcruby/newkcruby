@@ -161,7 +161,7 @@
         <script type="text/javascript">
 		    $(".google-maps").gmap3({
 			marker:{
-			address:"1 Infinite Loop, Cupertino, California",
+			address:"<%=#{result['venue']['address_1']}%>, <%=#{result['venue']['city']}%>, <%=#{result['venue']['state']}%>",
 			options:{ icon: "img/marker.png"}},
 			map:{
 			options:{
@@ -169,8 +169,8 @@
 			stylers: [ { "saturation":-100 }, { "lightness": 0 }, { "gamma": 0.5 }]},
 			],
 			zoom: 17,
-			scrollwheel:false,
-			draggable: false }
+			scrollwheel:true,
+			draggable: true }
 			}
 			});
 		</script>
