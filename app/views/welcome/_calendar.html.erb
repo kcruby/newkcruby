@@ -35,7 +35,7 @@
 		    var g_address = <% @meetup["results"]["venue"]["address_1"].to_s + "," + @meetup["results"]["venue"]["city"].to_s + "," + @meetup["results"]["venue"]["state"].to_s  %>
 		    $(".google-maps").gmap3({
 			marker:{
-			address:g_address.toString();,
+			address:g_address,
 			options:{ icon: "img/marker.png"}},
 			map:{
 			options:{
