@@ -31,7 +31,7 @@
 					</div>
 				</div>
 
-		<script type="text/javascript">
+		<%= javascript_tag do %>
 		    $(".google-maps").gmap3({
 			marker:{
 			address:"1901 Main St, San Diego, California",
@@ -46,7 +46,7 @@
 			draggable: false }
 			}
 			});
-		</script>
+		<%= end %>
 
 
 <% end %>
