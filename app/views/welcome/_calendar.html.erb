@@ -31,5 +31,22 @@
 					</div>
 				</div>
 
+		<%= javascript_tag do %>
+		    $(".google-maps").gmap3({
+			marker:{
+			address:<%= result["venue"]["address_1"] %>, <%= result["venue"]["city"] %>, <%= result["venue"]["state"] %>,
+			options:{ icon: "img/marker.png"}},
+			map:{
+			options:{
+			styles: [ {
+			stylers: [ { "saturation":-100 }, { "lightness": 0 }, { "gamma": 0.5 }]},
+			],
+			zoom: 17,
+			scrollwheel:false,
+			draggable: false }
+			}
+			});
+		<% end %>
+
 
 <% end %>

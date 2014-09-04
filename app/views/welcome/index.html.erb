@@ -156,25 +156,6 @@
 					</div>
 				</section>
 			<!--//SECTION ENDS-->
-
-			<!--//Upcoming Meetings Map Script-->
-        <script type="text/javascript">
-		    $(".google-maps").gmap3({
-			marker:{
-			address:<%= @meetup["results"]["venue"]["address_1"] %>, <%= @meetup["results"]["venue"]["city"] %>, <%= @meetup["results"]["venue"]["state"] %>,
-			options:{ icon: "img/marker.png"}},
-			map:{
-			options:{
-			styles: [ {
-			stylers: [ { "saturation":-100 }, { "lightness": 0 }, { "gamma": 0.5 }]},
-			],
-			zoom: 17,
-			scrollwheel:false,
-			draggable: false }
-			}
-			});
-		</script>
-			<!--//-->
 	
 	
 	<!--BLOG POSTS-->
