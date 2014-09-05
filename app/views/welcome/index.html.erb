@@ -67,7 +67,6 @@
 				<!--COUNTERS-->
 		<% @meetup_members["results"].each do |result| %>
 			<% members = result["members"] %>
-		<% end %>
 				<!--1-->
 				<div class="col-sm-4 col-lg-4 text-center">
 				<div class="counter wow bounceIn" -wow-offset="80" data-wow-duration="2s">
@@ -110,7 +109,7 @@
 						});
 					});				
 			</script>
-
+		<% end %>
 		
 		<!--TEAM SECTION STARTS-->	
 		<section id="team">
