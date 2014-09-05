@@ -91,7 +91,7 @@
 				jQuery('#counter-2').appear(function() {
 					$('#counter-2').countTo({
 						from: 0,
-						to: <%= members %>,
+						to: <%= members.to_i %>,
 						speed: 4000,
 						refreshInterval: 50,
 						onComplete: function(value) { 
