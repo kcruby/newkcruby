@@ -114,41 +114,7 @@ var isMobile = {
 	MILESTONE COUNTERS - ADD YOUR PERCENTAGES HERE
 ******************************************************************************/
 
-	jQuery('#counter-1').appear(function() {
-		$('#counter-1').countTo({
-            from: 0,
-			to: Math.floor((Date.now() - new Date("2003-11-01")) / (1000 * 60 * 60 * 24)),
-			speed: 4000,
-			refreshInterval: 50,
-			onComplete: function(value) { 
-			//console.debug(this); 
-			}
-			});
-		});
-	jQuery('#counter-2').appear(function() {
-		$('#counter-2').countTo({
-			from: 0,
-			to: 428,
-			speed: 4000,
-			refreshInterval: 50,
-			onComplete: function(value) { 
-			//console.debug(this); 
-			}
-			});
-		});
-	jQuery('#counter-3').appear(function() {
-		 $('#counter-3').countTo({
-			from: 0,
-			to: 97,
-			speed: 4000,
-			refreshInterval: 50,
-			onComplete: function(value) { 
-			//console.debug(this); 
-			}
-			});
-		});	
-	});
-
+	
 /*****************************************************************************
 	TICKER - ADD YOUR TEXT HERE
 ******************************************************************************/

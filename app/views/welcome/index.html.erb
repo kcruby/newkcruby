@@ -73,6 +73,46 @@
 					</div>	
 						</div>
 				<!--2-->
+			<% members = @meetup_members["results"]["members"] %>
+			<!--Javascript Counter-->
+			<script type="text/javascript">
+				jQuery('#counter-1').appear(function() {
+					$('#counter-1').countTo({
+			            from: 0,
+						to: Math.floor((Date.now() - new Date("2003-11-01")) / (1000 * 60 * 60 * 24)),
+						speed: 4000,
+						refreshInterval: 50,
+						onComplete: function(value) { 
+						//console.debug(this); 
+						}
+						});
+					});
+				<% addr = result["venue"]["address_1"] %>
+				jQuery('#counter-2').appear(function() {
+					$('#counter-2').countTo({
+						from: 0,
+						to: <%= members %>,
+						speed: 4000,
+						refreshInterval: 50,
+						onComplete: function(value) { 
+						//console.debug(this); 
+						}
+						});
+					});
+				jQuery('#counter-3').appear(function() {
+					 $('#counter-3').countTo({
+						from: 0,
+						to: 97,
+						speed: 4000,
+						refreshInterval: 50,
+						onComplete: function(value) { 
+						//console.debug(this); 
+						}
+						});
+					});	
+				});
+			</script>
+
 				<div class="col-sm-4 col-lg-4 text-center">
 				<div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
 					<div id="counter-2"></div>
@@ -86,7 +126,7 @@
 						<p class="light">Past Meetups</p>
 					</div>
 						</div>
-						<!--//COUNTERS-->
+			<!--//END COUNTERS-->
 					</div>
 				</div>
 			</div>
