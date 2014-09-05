@@ -124,17 +124,6 @@ var isMobile = {
 			//console.debug(this); 
 			}
 			});
-		});
-	jQuery('#counter-3').appear(function() {
-		 $('#counter-3').countTo({
-			from: 0,
-			to: 97,
-			speed: 4000,
-			refreshInterval: 50,
-			onComplete: function(value) { 
-			//console.debug(this); 
-			}
-			});
 		});	
 	});
 

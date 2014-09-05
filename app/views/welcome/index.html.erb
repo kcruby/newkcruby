@@ -65,8 +65,7 @@
 				<div class="pad45"></div>
 				
 				<!--COUNTERS-->
-		<% @meetup_members["results"].each do |result| %>
-			<% members = result["members"] %>
+	
 				<!--1-->
 				<div class="col-sm-4 col-lg-4 text-center">
 				<div class="counter wow bounceIn" -wow-offset="80" data-wow-duration="2s">
@@ -75,7 +74,8 @@
 					</div>	
 						</div>
 				<!--2-->
-
+		<% @meetup_members["results"].each do |result| %>
+			<% total_members = result["members"] %>
 				<div class="col-sm-4 col-lg-4 text-center">
 				<div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
 					<div id="counter-2"></div>
@@ -83,6 +83,24 @@
 					</div>
 						</div>
 				<!--3-->	
+				<script type="text/javascript">
+				
+				jQuery('#counter-2').appear(function() {
+					$('#counter-2').countTo({
+						from: 0,
+						to: <%= total_members.to_i %>,
+						speed: 4000,
+						refreshInterval: 50,
+						onComplete: function(value) { 
+						//console.debug(this); 
+						}
+						});
+					});	
+
+			</script>
+		<% end %>
+
+        <% total_members = @meetup_past_total[0].length %>
 				<div class="col-sm-4 col-lg-4 text-center ">
 				<div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
 					<div id="counter-3"></div>
@@ -94,22 +112,24 @@
 				</div>
 			</div>
 		</section>
-	<!--//Javascript member counter using Meetup API-->
-	        <script type="text/javascript">
+		    <script type="text/javascript">
 				
-				jQuery('#counter-2').appear(function() {
-					$('#counter-2').countTo({
-						from: 0,
-						to: <%= members.to_i %>,
-						speed: 4000,
-						refreshInterval: 50,
-						onComplete: function(value) { 
-						//console.debug(this); 
-						}
-						});
-					});				
+					jQuery('#counter-3').appear(function() {
+						 $('#counter-3').countTo({
+							from: 0,
+							to: <%= total_members %>,
+							speed: 4000,
+							refreshInterval: 50,
+							onComplete: function(value) { 
+							//console.debug(this); 
+							}
+							});
+						});	
+
 			</script>
 		<% end %>
+	<!--//Javascript member and past meetup counter using Meetup API-->
+	        
 		
 		<!--TEAM SECTION STARTS-->	
 		<section id="team">
