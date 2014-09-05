@@ -9,7 +9,7 @@ class WelcomeController < ApplicationController
 
 
   def meetup_members
-    url = URI.parse('http://api.meetup.com/2/groups?radius=25.0&order=id&desc=false&member_id=149131642&offset=0&photo-host=public&format=json&page=500&fields=&sig_id=149131642&sig=7919c54d53e92b1d5d77ed18931a5a155a8ac476')
+    url = URI.parse('http://api.meetup.com/2/groups?group_id=575011&radius=25.0&order=id&desc=false&offset=0&photo-host=public&format=json&page=500&fields=&sig_id=149131642&sig=2c3394f2573d80a5db423cd17683052bb35ba9fb')
     req = Net::HTTP::Get.new(url.to_s)
     res = Net::HTTP.start(url.host, url.port) {|http|
       http.request(req)
