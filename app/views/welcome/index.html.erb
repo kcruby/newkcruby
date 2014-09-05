@@ -65,6 +65,9 @@
 				<div class="pad45"></div>
 				
 				<!--COUNTERS-->
+		<% @meetup_members["results"].each do |result| %>
+			<% members = result["members"] %>
+		<% end %>
 				<!--1-->
 				<div class="col-sm-4 col-lg-4 text-center">
 				<div class="counter wow bounceIn" -wow-offset="80" data-wow-duration="2s">
@@ -73,24 +76,6 @@
 					</div>	
 						</div>
 				<!--2-->
-		<% @meetup_members["results"].each do |result| %>
-			<% members = result["members"] %>
-			<!--Javascript Counter-->
-			<script type="text/javascript">
-				
-				jQuery('#counter-2').appear(function() {
-					$('#counter-2').countTo({
-						from: 0,
-						to: <%= members.to_i %>,
-						speed: 4000,
-						refreshInterval: 50,
-						onComplete: function(value) { 
-						//console.debug(this); 
-						}
-						});
-					});				
-			</script>
-		<% end %>
 
 				<div class="col-sm-4 col-lg-4 text-center">
 				<div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
@@ -110,7 +95,21 @@
 				</div>
 			</div>
 		</section>
-	<!--//SOME STATS-->
+	<!--//Javascript member counter using Meetup API-->
+	        <script type="text/javascript">
+				
+				jQuery('#counter-2').appear(function() {
+					$('#counter-2').countTo({
+						from: 0,
+						to: <%= members.to_i %>,
+						speed: 4000,
+						refreshInterval: 50,
+						onComplete: function(value) { 
+						//console.debug(this); 
+						}
+						});
+					});				
+			</script>
 
 		
 		<!--TEAM SECTION STARTS-->	
