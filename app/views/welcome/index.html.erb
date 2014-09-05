@@ -100,7 +100,7 @@
 			</script>
 		<% end %>
 
-        <% total_members = @meetup_past_total[0].length %>
+<% total_members = @meetup_past_total["results"].length %>
 				<div class="col-sm-4 col-lg-4 text-center ">
 				<div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
 					<div id="counter-3"></div>
@@ -127,7 +127,6 @@
 						});	
 
 			</script>
-		<% end %>
 	<!--//Javascript member and past meetup counter using Meetup API-->
 	        
 		
