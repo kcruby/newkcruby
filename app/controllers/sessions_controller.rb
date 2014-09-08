@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    session[:user_id] = user.id
     if signed_in?
       redirect_to root_path
     end
