@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
     if @comment.present?
       @comment.destroy
     end
-  	redirect_to blog_path(@blog)
+  	redirect_to(:back)
   end
 
 private
