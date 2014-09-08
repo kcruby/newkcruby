@@ -24,13 +24,13 @@
 <% @blog.comments.each do |comment| %>
   <div style="border-top:1px solid gray;width:80%;">
     <p>
+      <strong style="margin-top:10px;">by:</strong>
+      <%= comment.user.name if comment.user %>
+    </p>
+    <p>
       <strong>
         Posted <%= time_ago_in_words(comment.created_at) %> ago
       </strong>
-    </p>
-    <p>
-      <strong>by:</strong>
-      <%= comment.user.name if comment.user %>
       <h2 style="margin:0 0 124px 50px;">
           <%= gravatar_for comment.user if comment.user %>  
       </h2>
@@ -39,7 +39,7 @@
       <strong>Comment:</strong>
     </p>
     <p>
-      <%= comment.comment %>
+      <%= word_wrap(comment.comment) %>
     </p>
   </div>
   
