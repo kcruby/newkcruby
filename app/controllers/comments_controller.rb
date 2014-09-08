@@ -9,7 +9,6 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-  	@comment = current_user.comments.find(comment_params)
     @comment.destroy
   	redirect_to(:back)
   end
