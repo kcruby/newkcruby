@@ -28,6 +28,9 @@
   <p>
     <strong>by:</strong>
     <%= comment.user.name if comment.user %>
+    <h2 style="margin:0 0 124px 50px;">
+        <%= gravatar_for comment.user %>  
+    </h2>
   </p>
   <p>
     <strong>Comment:</strong>
