@@ -8,12 +8,10 @@ Rails.application.routes.draw do
   resources "contacts", only: [:new, :create]
 
 
-  resources :users do 
-    resources :comments
-  end
-  resources :blogs do
-    resources :comments
-  end
+  resources :users 
+  resources :blogs
+  resources :comments
+  
   resources :sessions, only: [:new, :create, :destroy]
   match '/gallery',  to: 'users#gallery',            via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
