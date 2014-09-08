@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   def create
     @blog = Blog.find(params[:blog_id])
     @comment = @blog.comments.create!(comment_params)
-    @comment.user_id = current_user.id
+    @comment.user = current_user
     redirect_to @blog
   end
 

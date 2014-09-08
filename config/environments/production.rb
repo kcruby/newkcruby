@@ -81,6 +81,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
+  config.action_mailer.default_url_options = { :host => 'kcruby.org' }
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.smtp_settings = {
     :address   => "smtp.mandrillapp.com",
@@ -89,6 +90,6 @@ Rails.application.configure do
     :user_name => "MANDRILL_USERNAME",
     :password  => "MANDRILL_PASSWORD", # SMTP password is any valid API key
     :authentication => 'login', # Mandrill supports 'plain' or 'login'
-    :domain => 'yourdomain.com', # your domain to identify your server when connecting
+    :domain => 'kcruby.org', # your domain to identify your server when connecting
   }
 end
