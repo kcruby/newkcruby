@@ -10,8 +10,7 @@ Rails.application.routes.draw do
 
   resources :users 
   resources :blogs
-  resources :comments
-  resources :comment
+  resources :comments, only: [:new, :create, :destroy]
 
   resources :sessions, only: [:new, :create, :destroy]
   match '/gallery',  to: 'users#gallery',            via: 'get'
