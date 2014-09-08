@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-  	@comment = current_user.comments.find(params[:id])
+  	@comment = current_user.comments.find(params[:user_id])
     if @comment.present?
       @comment.destroy
     end
