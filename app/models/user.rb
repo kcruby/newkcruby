@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token
   has_many :blogs, dependent: :destroy
-  has_many :comments
+  has_many :comments, foreign_key: :user_id
 
 	validates :name, presence: true, length: {maximum: 50}
 
