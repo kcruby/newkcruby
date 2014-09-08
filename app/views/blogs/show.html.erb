@@ -27,7 +27,7 @@
   </strong>
   <p>
     <strong>by:</strong>
-    <%= comment.user.name %>
+    <%= comment.user.name if comment.user %>
   </p>
   <p>
     <strong>Comment:</strong>
