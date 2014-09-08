@@ -39,7 +39,7 @@
       <strong>Comment:</strong>
     </p>
     <p style="max-width:80%;">
-      <%= word_wrap(comment.comment) %>
+      <%= word_wrap comment.comment, line_width: 56 %>
     </p>
   </div>
   
