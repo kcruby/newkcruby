@@ -8,6 +8,10 @@ class CommentsController < ApplicationController
     redirect_to @blog
   end
 
+  def destroy
+  	@comment.destroy
+  end
+
 private
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params

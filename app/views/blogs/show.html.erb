@@ -44,6 +44,8 @@
     <p style="max-width:80%;">
       <%= word_wrap comment.comment, line_width: 56 %>
     </p>
+    <% if comment.user == current_user %>                    <%= link_to 'delete', comment, method: :delete,
+    <% end %>
   </div>
   
 <% end %>
