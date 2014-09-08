@@ -21,7 +21,7 @@
 </p>
 
 <h2>Comments</h2>
-<% @blog.comments.each do |comment| %>
+<% @comments.each do |comment| %>
   <strong>
     Posted <%= time_ago_in_words(comment.created_at) %> ago
   </strong>
@@ -37,7 +37,7 @@
 <% end %>
 
 <h2>Add a comment:</h2>
-<%= form_for([@blog, @blog.comments.build]) do |f| %>
+<%= form_for(@comments) do |f| %>
 
   <p>
     <%= f.label :comment %><br>
