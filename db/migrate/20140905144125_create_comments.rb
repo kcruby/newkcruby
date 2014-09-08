@@ -3,7 +3,6 @@ class CreateComments < ActiveRecord::Migration
     create_table :comments do |t|
       t.text :comment
       t.references :blog, index: true
-
       t.timestamps
     end
   end
