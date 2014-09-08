@@ -22,8 +22,15 @@
 
 <h2>Comments</h2>
 <% @blog.comments.each do |comment| %>
+  <strong>
+    Posted <%= time_ago_in_words(comment.created_at) %> ago
+  </strong>
   <p>
-    <strong>Commenter:</strong>
+    <strong>by:</strong>
+    <%= @comment.user.name %>
+  </p>
+  <p>
+    <strong>Comment:</strong>
     <%= comment.comment %>
   </p>
   
