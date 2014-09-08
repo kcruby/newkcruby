@@ -1,7 +1,13 @@
 class CommentsController < ApplicationController
   def create
     @blog = Blog.find(params[:blog_id])
-    @comment = @blog.comments.create!(params.require(:comment).permit! 
+    @comment = @blog.comments.create!(comment_params)
     redirect_to @blog
   end
+
+private
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def comment_params
+        params.require(:comment).permit!
+    end
 end
