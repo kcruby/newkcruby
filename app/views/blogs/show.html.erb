@@ -22,9 +22,11 @@
 
 <h2>Comments</h2>
 <% @blog.comments.each do |comment| %>
-  <strong style="border-top:1px solid gray;width:80%;">
-    Posted <%= time_ago_in_words(comment.created_at) %> ago
-  </strong>
+  <p>
+    <strong style="border-top:1px solid gray;width:80%;">
+      Posted <%= time_ago_in_words(comment.created_at) %> ago
+    </strong>
+  </p>
   <p>
     <strong>by:</strong>
     <%= comment.user.name if comment.user %>
