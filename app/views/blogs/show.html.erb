@@ -28,10 +28,14 @@
     </p>
     <p>
       <strong>by:&nbsp;
+        <% if signed_in? %>
+        <%= link_to comment.user.name, user_path(comment.user) if comment.user %>
+        <% else %>
         <%= comment.user.name if comment.user %>
+        <% end %>
       </strong>
       <h2 style="margin:0 0 124px 50px;">
-          <%= gravatar_for comment.user if comment.user %>  
+          <%= link_to image_tag(gravatar_for(comment.user)) if comment.user %>  
       </h2>
     </p>
     <p>
