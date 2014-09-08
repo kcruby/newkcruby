@@ -9,7 +9,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-  	@comment.destroy
+  	@comment = current_user.comments.find(params[:id])
+    if @comment.present?
+      @comment.destroy
+    end
   	redirect_to blog_path(@blog)
   end
 
