@@ -22,22 +22,26 @@
 
 <h2>Comments</h2>
 <% @blog.comments.each do |comment| %>
-  <p>
-    <strong style="border-top:1px solid gray;width:80%;">
-      Posted <%= time_ago_in_words(comment.created_at) %> ago
-    </strong>
-  </p>
-  <p>
-    <strong>by:</strong>
-    <%= comment.user.name if comment.user %>
-    <h2 style="margin:0 0 124px 50px;">
-        <%= gravatar_for comment.user if comment.user %>  
-    </h2>
-  </p>
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.comment %>
-  </p>
+  <div style="border-top:1px solid gray;width:80%;">
+    <p>
+      <strong>
+        Posted <%= time_ago_in_words(comment.created_at) %> ago
+      </strong>
+    </p>
+    <p>
+      <strong>by:</strong>
+      <%= comment.user.name if comment.user %>
+      <h2 style="margin:0 0 124px 50px;">
+          <%= gravatar_for comment.user if comment.user %>  
+      </h2>
+    </p>
+    <p>
+      <strong>Comment:</strong>
+    </p>
+    <p>
+      <%= comment.comment %>
+    </p>
+  </div>
   
 <% end %>
 
