@@ -24,12 +24,12 @@
 <% @blog.comments.each do |comment| %>
   <div style="border-top:1px solid gray;width:80%;">
     <p>
-      <strong style="margin-top:10px;">by:</strong>
-      <%= comment.user.name if comment.user %>
+      <strong style="padding-top:20px;">by:</strong>
+        Posted <%= time_ago_in_words(comment.created_at) %> ago
     </p>
     <p>
       <strong>
-        Posted <%= time_ago_in_words(comment.created_at) %> ago
+        <%= comment.user.name if comment.user %>
       </strong>
       <h2 style="margin:0 0 124px 50px;">
           <%= gravatar_for comment.user if comment.user %>  
