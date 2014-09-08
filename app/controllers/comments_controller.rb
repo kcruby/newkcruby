@@ -1,9 +1,8 @@
 class CommentsController < ApplicationController
   def create
     @blog = Blog.find(params[:blog_id])
-    @comment = Comment.new(comment_params) do |cmnt|
-    	cmnt.save!
-    end
+    @comment = Comment.new(comment_params) 
+    @comment.save!
     @comment.user = current_user
     redirect_to @blog
   end
