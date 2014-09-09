@@ -55,6 +55,7 @@
       <% if (comment.user == current_user) || current_user.admin?  %>
            <%= link_to 'delete', [@blog,comment], method: :delete %>
       <% end %>
+    <% end %>
   </div>
   
 <% end %>
