@@ -1,7 +1,7 @@
 
 
 <% @meetup["results"].each do |result| %>
-
+<div>
 <div class="col-sm-6 col-lg-6  wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
         <div class="price-plan">
 			<div class="price-plan-top">
@@ -30,6 +30,7 @@
 					<div class="google-maps">
 					</div>
 				</div>
+</div
 
 				<% addr = result["venue"]["address_1"] %>
 				<% city = result["venue"]["city"] %>
@@ -53,7 +54,7 @@
 			});
 		</script>
 	<% else %>
-	<p>Still looking for a location</p>
+	<p>Still looking for a location for&nbsp;<%= result["name"] %></p>
 	<% end %>
 
 
