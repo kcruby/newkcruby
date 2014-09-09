@@ -55,7 +55,7 @@ input{ -webkit-appearance: none; }
 .wow:nth-child(1), .wow:nth-child(2), .wow:nth-child(3), .wow:nth-child(4), .wow:nth-child(5), .wow:nth-child(6)  { visibility: hidden; }
 .fa-li { margin-left:-8px; padding-top:2px; }
 .container { overflow: hidden }
-#blog_container { border-top:5px solid gray; margin-top: 50px; }
+#blog_container { margin-top: 50px; }
 
 /**** LINKS ****/
 a {
