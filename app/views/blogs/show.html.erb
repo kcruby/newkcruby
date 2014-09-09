@@ -20,7 +20,15 @@
   <%= auto_link(@blog.message) %>
 </p>
 
+<% if @blog.user == current_user %>
+<%= link_to 'edit', edit_blog_path(@blog), method: :get %>&nbsp;|&nbsp;
+      <%= link_to 'delete', @blog, method: :delete,
+         data: { confirm: "Are you sure?" }%>&nbsp;|&nbsp;
+         <%= link_to 'back', :back, method: :get %>
+<% end %>
+
 <h2>Comments</h2>
+<% if signed_in? %>
 <% @blog.comments.each do |comment| %>
   <div style="border-top:1px solid gray;width:80%;padding:15px;">
     <p>
@@ -28,11 +36,7 @@
     </p>
     <p>
       <strong>by:&nbsp;
-        <% if signed_in? %>
         <%= link_to comment.user.name, user_path(comment.user) if comment.user %>
-        <% else %>
-        <%= comment.user.name if comment.user %>
-        <% end %>
       </strong>
       <h2 style="margin:0px 0 124px 50px;">
           <%= gravatar_for comment.user if comment.user %>  
@@ -62,13 +66,8 @@
     <%= f.submit %>
   </p>
 <% end %>
-
-<% if @blog.user == current_user %>
-<%= link_to 'edit', edit_blog_path(@blog), method: :get %>&nbsp;|&nbsp;
-      <%= link_to 'delete', @blog, method: :delete,
-         data: { confirm: "Are you sure?" }%>&nbsp;|&nbsp;
+<% else %>
+<p>Please sign-up or sign-in to comment</p>
 <% end %>
-<%= link_to 'back', :back, method: :get %>
-
 
 </div>
