@@ -24,7 +24,7 @@
 				</div>
 			</div>
 		</div>
-<% if !result["venue"]["name"] %>
+<% if result && result["venue"] %>
 	<p>Still looking for a location</p>
 	<% else %>
 		<div><span style="font-style:italic;">Where we're meeting:&nbsp;&nbsp;</span><span style="font-size:1.4em;font-weight:bold;"><%= result["venue"]["name"] %></span></div>
