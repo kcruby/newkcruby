@@ -1,9 +1,9 @@
 
 
 <% @meetup["results"].each do |result| %>
-<div style="margin-bottom:40px;">
+<div style="margin-bottom:40px;border-bottom:5px solid gray;float:left;">
 <div class="col-sm-6 col-lg-6  wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
-        <div class="price-plan" style="float:left;">
+        <div class="price-plan">
 			<div class="price-plan-top">
             	<a class="price-plan-link" href="<%= "http://www.meetup.com/kcruby/events/#{result["id"]}"%>">
 				<h2><%= result["name"] %></h2>
