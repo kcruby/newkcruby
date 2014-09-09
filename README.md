@@ -1,5 +1,5 @@
 ## KC Ruby
 
-Work in progress, check it out at:  
+Check it out at:  
 
 http://kcruby.org
