@@ -28,6 +28,7 @@
 <% end %>
 
 <h2>Comments</h2>
+<% if signed_in? %>
 <% @blog.comments.each do |comment| %>
   <div style="border-top:1px solid gray;width:80%;padding:15px;">
     <p>
@@ -35,11 +36,7 @@
     </p>
     <p>
       <strong>by:&nbsp;
-      <% if signed_in? %>
         <%= link_to comment.user.name, user_path(comment.user) if comment.user %>
-      <% else %>
-        <%= comment.user.name %>
-      <% end %>
       </strong>
       <h2 style="margin:0px 0 124px 50px;">
           <%= gravatar_for comment.user if comment.user %>  
@@ -51,11 +48,9 @@
     <p style="max-width:80%;">
       <%= word_wrap comment.comment, line_width: 56 %>
     </p>
-    <% if signed_in? %>
       <% if (comment.user == current_user) || current_user.admin?  %>
            <%= link_to 'delete', [@blog,comment], method: :delete %>
       <% end %>
-    <% end %>
   </div>
   
 <% end %>
