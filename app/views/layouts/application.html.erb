@@ -28,7 +28,7 @@
 				<div class="row">
 			<!--LOGO-->	
 		<div id="logo">
-			<a class="scroll" href="<%= link_to root_path %>"><img class="ruby wow pulse" data-wow-iteration="infinite" src="/assets/images/ruby.png" alt="logo" /></a>
+			<%= link_to image_tag("ruby.png"), {:action => 'index', :controller => 'welcome'}, {:class => 'ruby wow pulse'} {:data-wow-iteration 'infinite'}%>
 		</div>
 			<!--//LOGO-->
 		
