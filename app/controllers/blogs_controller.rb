@@ -20,7 +20,7 @@ class BlogsController < ApplicationController
     if current_user == nil 
       redirect_to new_session_path
     else
-    @blog = Blog.new
+      @blog = Blog.new
     end
   end
 
