@@ -26,7 +26,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1/edit
   def edit
-    @blog = current_user.blogs.find(params[:id])
+    @blog = current_user.blogs.find params[:id]
     rescue ActiveRecord::RecordNotFound
       redirect_to blogs_path, notice: "You cannot edit this event."
   end
