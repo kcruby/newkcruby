@@ -1,287 +1,295 @@
 <!--HOME SECTION STARTS-->
-		<section id="home" class="single_image">
-		<div class="light_overlay">
-			<!--ANIMATED TEXT-->	
-					<div id="content">
-						<div class="hidden-xs visible-sm visible-md visible-lg wow bounceInDown" data-wow-duration="2s">
-							<img src='/assets/images/biglogo.png' class="kclogo wow"/>
-						</div>
-						
-						<div class="byline wow slideInLeft pad45" data-wow-duration="2s" data-wow-delay="0.5s">
-							Kansas City
-						</div>
-						
-						<h1 class="wow bounceInDown" data-wow-duration="2s" data-wow-delay="0.7s">
-							RUBY
-						</h1>
-						
-						<div class="name wow bounceInDown" data-wow-duration="3s" data-wow-delay="1s">
-							Users Group
-						</div>
-						
-						<div class="text-center pad30">
-							<a href="#about" class="scroll">
-							<i class="fa fa-caret-down fa-inverse ilink fa-3x wow rotateIn animated" data-wow-duration="1s" data-wow-delay="2s"></i></a>
-						</div>
-					</div>	
-				</div>	
-				</section>
-			<!--//HOME SECTION ENDS-->
-	
-	
-	<!--BIG IMAGE-->
-		<section id="big_image" >
-		
-		</section>
-	<!--//BIG IMAGE ENDS-->
-	
-	<!--ABOUT SECTION STARTS-->	
-			<section id="about">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 col-lg-12">
-						<h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
-							What to expect
-						</h1>
-						
-						<div class="lead wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
-							Share ideas, code, and your love for <span class="colour"><strong>Ruby</strong></span>. Show off your latest project, gems and plugins, or something you learned. <span class="colour">Open to all skill levels</span>… just show up and join the fun!
-						</div>		
-						</div>
-					</div>
-				</div>			
-		    </section>
-		<!--//ABOUT SECTION ENDS-->
-	
-		
-		<!--SOME STATS-->
-	<section id="milestones">
-		<div class="well">	
-			<div class="dark_overlay">	
-				<div class="container">
-					<h1 class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
-						some stats
-					</h1>
-				<div class="pad45"></div>
-				
-				<!--COUNTERS-->
-	
-				<!--1-->
-				<div class="col-sm-4 col-lg-4 text-center">
-				<div class="counter wow bounceIn" -wow-offset="80" data-wow-duration="2s">
-					<div id="counter-1"></div>
-						<p class="light">Days Since Founded</p>
-					</div>	
-						</div>
-				<!--2-->
-		<% @meetup_members["results"].each do |result| %>
-			<% total_members = result["members"] %>
-				<div class="col-sm-4 col-lg-4 text-center">
-				<div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
-					<div id="counter-2"></div>
-						<p class="light">Number Of Members</p>
-					</div>
-						</div>
-				<!--3-->	
-				<script type="text/javascript">
-				
-				jQuery('#counter-2').appear(function() {
-					$('#counter-2').countTo({
-						from: 0,
-						to: <%= total_members.to_i %>,
-						speed: 4000,
-						refreshInterval: 50,
-						onComplete: function(value) { 
-						//console.debug(this); 
-						}
-						});
-					});	
+<section id="home" class="single_image">
+  <div class="light_overlay">
+    <!--ANIMATED TEXT-->
+    <div id="content">
+      <div class="hidden-xs visible-sm visible-md visible-lg wow bounceInDown" data-wow-duration="2s">
+        <img src='/assets/images/biglogo.png' class="kclogo wow"/>
+      </div>
 
-			</script>
-		<% end %>
+      <div class="byline wow slideInLeft pad45" data-wow-duration="2s" data-wow-delay="0.5s">
+        Kansas City
+      </div>
 
-<% total_members = @meetup_past_total["results"].length %>
-				<div class="col-sm-4 col-lg-4 text-center ">
-				<div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
-					<div id="counter-3"></div>
-						<p class="light">Past Meetups</p>
-					</div>
-						</div>
-			<!--//END COUNTERS-->
-					</div>
-				</div>
-			</div>
-		</section>
-		    <script type="text/javascript">
-				
-					jQuery('#counter-3').appear(function() {
-						 $('#counter-3').countTo({
-							from: 0,
-							to: <%= total_members %>,
-							speed: 4000,
-							refreshInterval: 50,
-							onComplete: function(value) { 
-							//console.debug(this); 
-							}
-							});
-						});	
+      <h1 class="wow bounceInDown" data-wow-duration="2s" data-wow-delay="0.7s">
+        RUBY
+      </h1>
 
-			</script>
-	<!--//Javascript member and past meetup counter using Meetup API-->
-	        
-		
-		<!--TEAM SECTION STARTS-->	
-		<section id="team">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-lg-12">
-				<h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
-					Who we are
-				</h1>
-				
-				<div class="lead  wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
-					 
-					The <span style="font-size:1.2em;">Kansas City Ruby User Group</span> (KCRug) was founded in <span class="colour">November of 2003</span>, by <strong><span class="colour">Jason Clinton</span></strong> and <strong><span class="colour">Shashank Date</span></strong>. Jason and Shashank formed the group with the desire to have <strong>a common place where Ruby programmers could come together</strong> and talk about Ruby. 
-				</div>
-			</div>
-		
-		<div class="col-sm-12 col-lg-6">
-			<p class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
-				KCRug is a member of a community of User Groups around the country. Anyone is welcome to attend. There are no dues or fees, and you don't have to know anything about Ruby or Rails. There is a chance you might learn something from others in the group.
-			</p>	
-				</div>
-		
-		<div class="col-sm-12 col-lg-6">
-			<p class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
-				Ruby is a computer programming language. It is very often used together with Rails, which is a framework for quickly producing robust web applications based upon databases.
-			</p>
-				</div>
-			</div>
-		</div>
+      <div class="name wow bounceInDown" data-wow-duration="3s" data-wow-delay="1s">
+        Users Group
+      </div>
 
-	
-	<!--UPCOMING MEETINGS SECTION STARTS-->	
-		<section id="price">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-lg-12">
-						<h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
-							Upcoming Meetups
-						</h1>
-					
-					<div class="lead  wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
-						
-					</div>
-				</div>
-			</div>
-		</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-lg-12">
-				<div class="row">
-			<div id="pricing" class="container text-center">
-			
-		
-	 <%= render 'calendar' %>
+      <div class="text-center pad30">
+        <a href="#about" class="scroll">
+          <i class="fa fa-caret-down fa-inverse ilink fa-3x wow rotateIn animated" data-wow-duration="1s" data-wow-delay="2s"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--//HOME SECTION ENDS-->
 
-		</div>
 
-		</div>
-			</div>
-				</div>
-					</div>
-				</section>
-			<!--//SECTION ENDS-->
-	
-	
-	<!--BLOG POSTS-->
-		<section id="blog">
-		<div id="blog_container" class="container">
-			<div class="row">
-				<div class="col-sm-12 col-lg-12 pad30  wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
-					<h2 style="margin-top:40px">Latest Blog Post</h2>
-					<br>
-					
-					<% @blogs.order('created_at DESC').take(1).each do |blog| %>
-      
-        <h1 class="blog-title"><%= blog.title %></h1>
-          <h6>
-            <%= blog.created_at.strftime("%b %d, %Y") %>
+<!--BIG IMAGE-->
+<section id="big_image">
 
-          </h6>       
-          <p class="message">
-            <%= truncate(blog.message, length: 50, separator: ' ') %> &nbsp; <%= link_to 'Read more', blog_path(blog), method: :get %>
-          </p> 
-         
-          <p>
-            <em>written by &nbsp;</em>
-            <% if signed_in? %>
-            <%= link_to blog.user.name, user_path(blog.user) %>
-            <% else %>
-            <%= blog.user.name %>
-            <% end %>
-          </p>
-         <% if blog.user == current_user %>
-			<%= link_to 'edit', edit_blog_path(blog), method: :get %>&nbsp;|&nbsp;
-			<%= link_to 'delete', blog, method: :delete,
-         data: { confirm: "You sure?" }%>&nbsp;|&nbsp;
+</section>
+<!--//BIG IMAGE ENDS-->
 
-			<% end %>
-	<% end %>
-					<%= link_to 'Go To Blog Forum', url_for('/blogs'), :class => "go_to_red", method: :get %>
-				<div class="pad30"></div>
-			<div id="grid-container2" class="cbp-l-grid-blog pad90">
+<!--ABOUT SECTION STARTS-->
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12">
+        <h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+          What to expect
+        </h1>
+
+        <div class="lead wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+          Share ideas, code, and your love for <span class="colour"><strong>Ruby</strong></span>. Show off your latest
+          project, gems and plugins, or something you learned. <span class="colour">Open to all skill levels</span>…
+          just show up and join the fun!
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--//ABOUT SECTION ENDS-->
+
+
+<!--SOME STATS-->
+<section id="milestones">
+  <div class="well">
+    <div class="dark_overlay">
+      <div class="container">
+        <h1 class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
+          some stats
+        </h1>
+
+        <div class="pad45"></div>
+
+        <!--COUNTERS-->
+
+        <!--1-->
+        <div class="col-sm-4 col-lg-4 text-center">
+          <div class="counter wow bounceIn" -wow-offset="80" data-wow-duration="2s">
+          <div id="counter-1"></div>
+          <p class="light">Days Since Founded</p>
+        </div>
+      </div>
+      <!--2-->
+      <% @meetup_members["results"].each do |result| %>
+          <% total_members = result["members"] %>
+          <div class="col-sm-4 col-lg-4 text-center">
+            <div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
+              <div id="counter-2"></div>
+              <p class="light">Number Of Members</p>
             </div>
-		</div>
-	</div>
-		</div>
-			<div class="pad30"></div>
-		</section>
-	<!--//BLOG POSTS-->
+          </div>
+          <!--3-->
+          <script type="text/javascript">
 
-			<!--CONTACT SECTION STARTS-->
-				<section id="contact">
-					<div class="container" style="margin-left:5%;">
-						<div class="row">
-							<div class="col-sm-12 col-lg-12 ">
-							
-							
-							<div class="lead wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s" style="font-size:5em;padding:15px 0 0 25px;">
-								Send us a <strong>message</strong>! 
-							</div>
-							
-							<div class="row">
-								<div class="col-sm-12 col-lg-12  wow fadeInUp" data-wow-offset="80" data-wow-duration="2s">
-								
-								<h2 style="font-size:1em;padding-left:25px;">and check out our <strong>GitHub&nbsp;</strong>page&nbsp;&nbsp;<a href="https://github.com/darrencauthon/newkcruby" style="font-size:1.7em;"><i class="fa fa-github"></i></a></h2> 
-								
-										
-									
-								
-						
-						<div class="col-sm-8 col-lg-8  wow fadeInUp" data-wow-offset="80" data-wow-duration="2s" style="margin:0 14% 0 14%;">
-						<div class="contact_form">  
-							<div id="note"></div>
-							<div id="fields">
-							<%= simple_form_for Contact.new, :html => {:id => 'ajax-contact-form' } do |f| %>
+              jQuery('#counter-2').appear(function () {
+                  $('#counter-2').countTo({
+                      from: 0,
+                      to: <%= total_members.to_i %>,
+                      speed: 4000,
+                      refreshInterval: 50,
+                      onComplete: function (value) {
+                          //console.debug(this);
+                      }
+                  });
+              });
 
-    <%= f.input :name, :class => "col-xs-12 col-md-12" %>
-    <%= f.input :email, :class => "col-xs-12  col-md-12" %>
-    <%= f.input :subject, :class => "col-xs-12  col-md-12" %>
-    <%= f.input :message, :as => :text, :class => "col-xs-12  col-md-12" %>
-    <div class="clear"></div>
-      </br>
-      <%= f.button :submit, 'Send message', :class=> "btn marg-right10" %>
-    <div class="clear"></div>
-  <% end %>
-							<div class="clear"></div>  
-						</div>
-					</div> 
-				<!-- // End FORM -->	
-				</div>
-			</div>
-		</div>
-			</div>
-				</div>
-						</section>
-							<!--//END CONTACT SECTION--> 
+          </script>
+      <% end %>
+
+      <% total_members = @meetup_past_total["results"].length %>
+      <div class="col-sm-4 col-lg-4 text-center ">
+        <div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
+          <div id="counter-3"></div>
+          <p class="light">Past Meetups</p>
+        </div>
+      </div>
+      <!--//END COUNTERS-->
+    </div>
+  </div>
+  </div>
+</section>
+<script type="text/javascript">
+
+    jQuery('#counter-3').appear(function () {
+        $('#counter-3').countTo({
+            from: 0,
+            to: <%= total_members %>,
+            speed: 4000,
+            refreshInterval: 50,
+            onComplete: function (value) {
+                //console.debug(this);
+            }
+        });
+    });
+
+</script>
+<!--//Javascript member and past meetup counter using Meetup API-->
+
+
+<!--TEAM SECTION STARTS-->
+<section id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12">
+        <h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+          Who we are
+        </h1>
+
+        <div class="lead  wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+
+          The <span style="font-size:1.2em;">Kansas City Ruby User Group</span> (KCRug) was founded in
+          <span class="colour">November of 2003</span>, by <strong><span class="colour">Jason Clinton</span></strong>
+          and <strong><span class="colour">Shashank Date</span></strong>. Jason and Shashank formed the group with the
+          desire to have <strong>a common place where Ruby programmers could come together</strong> and talk about Ruby.
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-lg-6">
+        <p class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
+          KCRug is a member of a community of User Groups around the country. Anyone is welcome to attend. There are no
+          dues or fees, and you don't have to know anything about Ruby or Rails. There is a chance you might learn
+          something from others in the group.
+        </p>
+      </div>
+
+      <div class="col-sm-12 col-lg-6">
+        <p class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
+          Ruby is a computer programming language. It is very often used together with Rails, which is a framework for
+          quickly producing robust web applications based upon databases.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!--UPCOMING MEETINGS SECTION STARTS-->
+  <section id="price">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12">
+          <h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+            Upcoming Meetups
+          </h1>
+
+          <div class="lead  wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12">
+          <div class="row">
+            <div id="pricing" class="container text-center">
+
+
+              <%= render 'calendar' %>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--//SECTION ENDS-->
+
+
+  <!--BLOG POSTS-->
+  <section id="blog">
+    <div id="blog_container" class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12 pad30  wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
+          <h2 style="margin-top:40px">Latest Blog Post</h2>
+          <br>
+
+          <% @blogs.order('created_at DESC').take(1).each do |blog| %>
+
+              <h1 class="blog-title"><%= blog.title %></h1>
+              <h6>
+                <%= blog.created_at.strftime("%b %d, %Y") %>
+
+              </h6>
+
+              <p class="message">
+                <%= truncate(blog.message, length: 50, separator: ' ') %> &nbsp; <%= link_to 'Read more', blog_path(blog), method: :get %>
+              </p>
+
+              <p>
+                <em>written by &nbsp;</em>
+                <% if signed_in? %>
+                    <%= link_to blog.user.name, user_path(blog.user) %>
+                <% else %>
+                    <%= blog.user.name %>
+                <% end %>
+              </p>
+              <% if blog.user == current_user %>
+                  <%= link_to 'edit', edit_blog_path(blog), method: :get %>&nbsp;|&nbsp;
+                  <%= link_to 'delete', blog, method: :delete,
+                              data: {confirm: "You sure?"} %>&nbsp;|&nbsp;
+
+              <% end %>
+          <% end %>
+          <%= link_to 'Go To Blog Forum', url_for('/blogs'), :class => "go_to_red", method: :get %>
+          <div class="pad30"></div>
+          <div id="grid-container2" class="cbp-l-grid-blog pad90">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pad30"></div>
+  </section>
+  <!--//BLOG POSTS-->
+
+  <!--CONTACT SECTION STARTS-->
+  <section id="contact">
+    <div class="container" style="margin-left:5%;">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12 ">
+
+
+          <div class="lead wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s" style="font-size:5em;padding:15px 0 0 25px;">
+            Send us a <strong>message</strong>!
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-lg-12  wow fadeInUp" data-wow-offset="80" data-wow-duration="2s">
+
+              <h2 style="font-size:1em;padding-left:25px;">and check out our <strong>GitHub&nbsp;</strong>page&nbsp;&nbsp;<a href="https://github.com/darrencauthon/newkcruby" style="font-size:1.7em;"><i class="fa fa-github"></i></a>
+              </h2>
+
+
+              <div class="col-sm-8 col-lg-8  wow fadeInUp" data-wow-offset="80" data-wow-duration="2s" style="margin:0 14% 0 14%;">
+                <div class="contact_form">
+                  <div id="note"></div>
+                  <div id="fields">
+                    <%= simple_form_for Contact.new, :html => {:id => 'ajax-contact-form'} do |f| %>
+
+                        <%= f.input :name, :class => "col-xs-12 col-md-12" %>
+                        <%= f.input :email, :class => "col-xs-12  col-md-12" %>
+                        <%= f.input :subject, :class => "col-xs-12  col-md-12" %>
+                        <%= f.input :message, :as => :text, :class => "col-xs-12  col-md-12" %>
+                        <div class="clear"></div>
+                        </br>
+                        <%= f.button :submit, 'Send message', :class => "btn marg-right10" %>
+                        <div class="clear"></div>
+                    <% end %>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+                <!-- // End FORM -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!--//END CONTACT SECTION-->
