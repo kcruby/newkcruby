@@ -33,10 +33,6 @@ describe WelcomeController do
             
         end
 
-      end
-
-      describe "multiple examples" do
-
         it "should pass the meetup member data to the view" do
 
           stub_request(:any, 'http://api.meetup.com/2/groups?group_id=575011&radius=25.0&order=id&desc=false&offset=0&photo-host=public&format=json&page=500&fields=&sig_id=149131642&sig=2c3394f2573d80a5db423cd17683052bb35ba9fb').
@@ -47,11 +43,6 @@ describe WelcomeController do
           controller.instance_eval { @meetup_members }.must_equal example
             
         end
-
-      end
-
-
-      describe "multiple examples" do
 
         it "should pass the meetup member data to the view" do
 
