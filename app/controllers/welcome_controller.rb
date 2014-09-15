@@ -1,6 +1,4 @@
 class WelcomeController < ApplicationController
-  #require 'net/http'
-  #require 'json'
 
   def index
   	@meetup            = MeetupClient.calendar
