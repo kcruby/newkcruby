@@ -70,3 +70,4 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'webmock', group: [:development, :test]
+gem 'mocha',   group: [:development, :test]
