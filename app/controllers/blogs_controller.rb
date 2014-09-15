@@ -20,13 +20,13 @@ class BlogsController < ApplicationController
     if current_user == nil 
       redirect_to new_session_path
     else
-    @blog = Blog.new
+      @blog = Blog.new
     end
   end
 
   # GET /blogs/1/edit
   def edit
-    @blog = current_user.blogs.find(params[:id])
+    @blog = current_user.blogs.find params[:id]
     rescue ActiveRecord::RecordNotFound
       redirect_to blogs_path, notice: "You cannot edit this event."
   end
@@ -35,14 +35,10 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     @blog = current_user.blogs.build(blog_params)
-    respond_to do |format|
-      if @blog.save
-        format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
-        format.json { render :show, status: :created, location: @blog }
-      else
-        format.html { render :new }
-        format.json { render json: @blog.errors, status: :unprocessable_entity }
-      end
+    if @blog.save
+      redirect_to @blog, notice: 'Blog was successfully created.'
+    else
+      render :new
     end
   end
 
