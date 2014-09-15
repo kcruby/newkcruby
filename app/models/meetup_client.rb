@@ -15,7 +15,7 @@ module MeetupClient
   def self.make_web_request url
     uri      = URI.parse url
     request  = Net::HTTP::Get.new uri.to_s
-    response = Net::HTTP.start(uri.host, uri.port) { |h| h.request(request) }
+    response = Net::HTTP.start(uri.host, uri.port) { |h| h.request request }
     JSON.parse response.body
   end
 
