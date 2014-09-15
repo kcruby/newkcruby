@@ -37,9 +37,4 @@ class WelcomeController < ApplicationController
   	return res.body
   end
 
-	def gm_api_key
-    "AIzaSyATeCy88iCOqi_TdWAb8EJ1WavvGHP2e1c"
-  end
-
-
 end
