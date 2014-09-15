@@ -4,7 +4,6 @@ describe WelcomeController do
 
   let(:controller) { WelcomeController.new }
 
-
   describe "the index action" do
 
     before do
