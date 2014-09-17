@@ -69,3 +69,5 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'webmock', group: [:test]
+gem 'mocha',   group: [:development, :test]
