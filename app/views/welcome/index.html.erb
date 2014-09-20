@@ -64,11 +64,11 @@
 
         <!--1-->
         <div class="col-sm-4 col-lg-4 text-center">
-          <div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s"></div>
+          <div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
           <div id="counter-1"></div>
           <p class="light">Days Since Founded</p>
+          </div>
         </div>
-      </div>
       <!--2-->
       <% @meetup_members['results'].each do |result| %>
           <% total_members = result['members'] %>
@@ -104,6 +104,7 @@
       <!--//END COUNTERS-->
     </div>
   </div>
+</div>
 </section>
 <script type="text/javascript">
     jQuery('#counter-3').appear(function () {
