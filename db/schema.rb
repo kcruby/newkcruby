@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140908121545) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "blogs", force: true do |t|
     t.string   "title"
     t.text     "message"
@@ -21,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140908121545) do
     t.integer  "user_id"
   end
 
-  add_index "blogs", ["user_id", "created_at"], name: "index_blogs_on_user_id_and_created_at"
+  add_index "blogs", ["user_id", "created_at"], name: "index_blogs_on_user_id_and_created_at", using: :btree
 
   create_table "comments", force: true do |t|
     t.text     "comment"
@@ -31,7 +34,7 @@ ActiveRecord::Schema.define(version: 20140908121545) do
     t.integer  "user_id"
   end
 
-  add_index "comments", ["blog_id"], name: "index_comments_on_blog_id"
+  add_index "comments", ["blog_id"], name: "index_comments_on_blog_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
@@ -46,7 +49,7 @@ ActiveRecord::Schema.define(version: 20140908121545) do
     t.string   "ghusername"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
 end
