@@ -1,6 +1,6 @@
 class HashThing
 
-  def initialize @subject
+  def initialize subject
     @subject = subject
   end
 

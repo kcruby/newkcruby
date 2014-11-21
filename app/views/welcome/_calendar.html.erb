@@ -1,18 +1,18 @@
 
 
-<% @meetup["results"].each do |result| %>
+<% @events.each do |event| %>
 <div style="margin-bottom:40px;border-bottom:5px solid gray;float:left;">
 <div class="col-sm-6 col-lg-6  wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
         <div class="price-plan">
 			<div class="price-plan-top">
-            	<a class="price-plan-link" href="<%= "http://www.meetup.com/kcruby/events/#{result["id"]}"%>">
-				<h2><%= result["name"] %></h2>
+            	<a class="price-plan-link" href="<%= "http://www.meetup.com/kcruby/events/#{event.id}"%>">
+				<h2><%= event.name %></h2>
 				<div class="price">
-          <% if result["time"].present? && result["duration"].present? %>
-	            <% t = Time.at(result["time"]/1000.0) %>
+          <% if event.time.present? && event.duration.present? %>
+	            <% t = event.event_date  %>
 				<span class="dollar"><span style="font-size:.8em;"><%= t.strftime("%B") %></span></span><span class="amt"><%= t.strftime("#{t.day.ordinalize}") %></span> <span class="mo"><%= t.strftime("%Y") %></span>
                 <p class="price-breakdown">
-                		<br><span style="font-size:1.5em;"><span style="font-size:1.5em;"><%= t.strftime("%A") %>&nbsp;&nbsp;&nbsp;</span><br><br><span style="font-size:1.5em;"</span><%= t.strftime("%-I") %></span><span style="font-size:1.2em;">:00pm</span>&nbsp;to&nbsp;<span style="font-size:1.5em;"><% dur = Time.at((result["time"]/1000)+(result["duration"]/1000)) %><%= dur.strftime("%-I") %></span><span style="font-size:1.2em;">:00pm</span></span>
+                		<br><span style="font-size:1.5em;"><span style="font-size:1.5em;"><%= t.strftime("%A") %>&nbsp;&nbsp;&nbsp;</span><br><br><span style="font-size:1.5em;"</span><%= t.strftime("%-I") %></span><span style="font-size:1.2em;">:00pm</span>&nbsp;to&nbsp;<span style="font-size:1.5em;"><% dur = Time.at((event.time/1000)+(event.duration/1000)) %><%= dur.strftime("%-I") %></span><span style="font-size:1.2em;">:00pm</span></span>
                 </p>
           <% end %>
               </div>
@@ -20,23 +20,23 @@
           		</div>
 				<div class="info-wrapper">
 				<ul class="list-group">
-					<li style="font-size:1.2em;"><%= strip_tags(result["description"]) %></li>
+					<li style="font-size:1.2em;"><%= strip_tags(event.description) %></li>
 				</ul>
-					<a href="<%= "http://www.meetup.com/kcruby/events/#{result["id"]}"%>" class="btn"><span style="font-size:1.4em;">RSVP</span><br>on meetup.com</a>
+					<a href="<%= "http://www.meetup.com/kcruby/events/#{event.id}"%>" class="btn"><span style="font-size:1.4em;">RSVP</span><br>on meetup.com</a>
 				</div>
 			</div>
 		</div>
-<% if result && result["venue"] %>
-		<div><span style="font-style:italic;">Where we're meeting:&nbsp;&nbsp;</span><span style="font-size:1.4em;font-weight:bold;"><%= result["venue"]["name"] %></span></div>
+<% if event && event.venue %>
+		<div><span style="font-style:italic;">Where we're meeting:&nbsp;&nbsp;</span><span style="font-size:1.4em;font-weight:bold;"><%= event.venue.name %></span></div>
 				<div id="google-maps">
 					<div class="google-maps">
 					</div>
 				</div>
 </div>
 
-				<% addr = result["venue"]["address_1"] %>
-				<% city = result["venue"]["city"] %>
-				<% state = result["venue"]["state"] %>
+				<% addr = event.venue.address_1 %>
+				<% city = event.venue.city %>
+				<% state = event.venue.state %>
 				<% full_addr = addr + "," + city + "," + state %>
 
 		<script type="text/javascript">
@@ -56,7 +56,7 @@
 			});
 		</script>
 	<% else %>
-	<p>Still looking for a location for&nbsp;<%= result["name"] %></p>
+	<p>Still looking for a location for&nbsp;<%= event.name %></p>
 	<% end %>
 
 
