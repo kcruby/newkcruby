@@ -10,9 +10,9 @@
 				<div class="price">
           <% if event.time.present? && event.duration.present? %>
 	            <% t = event.event_date  %>
-				<span class="dollar"><span style="font-size:.8em;"><%= t.strftime("%B") %></span></span><span class="amt"><%= t.strftime("#{t.day.ordinalize}") %></span> <span class="mo"><%= t.strftime("%Y") %></span>
+				<span class="dollar"><span style="font-size:.8em;"><%= event.formatted_month %></span></span><span class="amt"><%= event.formatted_day_as_number %></span> <span class="mo"><%= event.formatted_year %></span>
                 <p class="price-breakdown">
-                		<br><span style="font-size:1.5em;"><span style="font-size:1.5em;"><%= t.strftime("%A") %>&nbsp;&nbsp;&nbsp;</span><br><br><span style="font-size:1.5em;"</span><%= t.strftime("%-I") %></span><span style="font-size:1.2em;">:00pm</span>&nbsp;to&nbsp;<span style="font-size:1.5em;"><% dur = Time.at((event.time/1000)+(event.duration/1000)) %><%= dur.strftime("%-I") %></span><span style="font-size:1.2em;">:00pm</span></span>
+                		<br><span style="font-size:1.5em;"><span style="font-size:1.5em;"><%= event.formatted_day_as_string %>&nbsp;&nbsp;&nbsp;</span><br><br><span style="font-size:1.5em;"</span><%= event.formatted_begin_hour %></span><span style="font-size:1.2em;">:00pm</span>&nbsp;to&nbsp;<span style="font-size:1.5em;"><%= event.formatted_end_hour %></span><span style="font-size:1.2em;">:00pm</span></span>
                 </p>
           <% end %>
               </div>
