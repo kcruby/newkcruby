@@ -34,15 +34,11 @@
 				</div>
 </div>
 
-				<% addr = event.venue.address_1 %>
-				<% city = event.venue.city %>
-				<% state = event.venue.state %>
-				<% full_addr = addr + "," + city + "," + state %>
 
 		<script type="text/javascript">
 		    $(".google-maps").gmap3({
 			marker:{
-			address:"<%= full_addr %>",
+			address:"<%= event.venue.full_address %>",
 			options:{ icon: "/assets/images/marker.png"}},
 			map:{
 			options:{
