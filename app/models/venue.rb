@@ -1,0 +1,2 @@
+class Venue < HashThing
+end
