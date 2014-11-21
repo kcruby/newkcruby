@@ -6,6 +6,10 @@ class Event < HashThing
     nil
   end
 
+  def url
+    "http://www.meetup.com/kcruby/events/#{id}"
+  end
+
   def formatted_month
     event_date.strftime("%B")
   rescue
