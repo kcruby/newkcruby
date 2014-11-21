@@ -8,11 +8,13 @@
             	<a class="price-plan-link" href="<%= "http://www.meetup.com/kcruby/events/#{result["id"]}"%>">
 				<h2><%= result["name"] %></h2>
 				<div class="price">
+          <% if result["time"].present? && result["duration"].present? %>
 	            <% t = Time.at(result["time"]/1000.0) %>
 				<span class="dollar"><span style="font-size:.8em;"><%= t.strftime("%B") %></span></span><span class="amt"><%= t.strftime("#{t.day.ordinalize}") %></span> <span class="mo"><%= t.strftime("%Y") %></span>
                 <p class="price-breakdown">
                 		<br><span style="font-size:1.5em;"><span style="font-size:1.5em;"><%= t.strftime("%A") %>&nbsp;&nbsp;&nbsp;</span><br><br><span style="font-size:1.5em;"</span><%= t.strftime("%-I") %></span><span style="font-size:1.2em;">:00pm</span>&nbsp;to&nbsp;<span style="font-size:1.5em;"><% dur = Time.at((result["time"]/1000)+(result["duration"]/1000)) %><%= dur.strftime("%-I") %></span><span style="font-size:1.2em;">:00pm</span></span>
                 </p>
+          <% end %>
               </div>
             </a>
           		</div>
