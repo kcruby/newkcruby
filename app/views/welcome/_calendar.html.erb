@@ -1,18 +1,16 @@
-
-
 <% @events.each do |event| %>
-<div style="margin-bottom:40px;border-bottom:5px solid gray;float:left;">
+<div id="calendar_container">
 <div class="col-sm-6 col-lg-6  wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
         <div class="price-plan">
 			<div class="price-plan-top">
             	<a class="price-plan-link" href="<%= event.url %>">
-				<h2><%= event.name %></h2>
+				<h2><%= event.name == nil ? "?" : event.name %></h2>
 				<div class="price">
           <% if event.time.present? && event.duration.present? %>
 	            <% t = event.event_date  %>
-				<span class="dollar"><span style="font-size:.8em;"><%= event.formatted_month %></span></span><span class="amt"><%= event.formatted_day_as_number %></span> <span class="mo"><%= event.formatted_year %></span>
+				<span class="dollar"><span style="font-size:.8em;"><%= event.formatted_month == nil ? "?" : event.formatted_month %></span></span><span class="amt"><%= event.formatted_day_as_number == nil ? "?" : event.formatted_day_as_number %></span> <span class="mo"><%= event.formatted_year == nil ? "?" : event.formatted_day_as_number %></span> <span class="mo"><%= event.formatted_year == nil ? "?" : event.formatted_year %></span>
                 <p class="price-breakdown">
-                		<br><span style="font-size:1.5em;"><span style="font-size:1.5em;"><%= event.formatted_day_as_string %>&nbsp;&nbsp;&nbsp;</span><br><br><span style="font-size:1.5em;"</span><%= event.formatted_begin_hour %></span><span style="font-size:1.2em;">:00pm</span>&nbsp;to&nbsp;<span style="font-size:1.5em;"><%= event.formatted_end_hour %></span><span style="font-size:1.2em;">:00pm</span></span>
+                		<br><span style="font-size:1.5em;"><span style="font-size:1.5em;"><%= event.formatted_day_as_string == nil ? "?" : event.formatted_day_as_string %>&nbsp;&nbsp;&nbsp;</span><br><br><span style="font-size:1.5em;"</span><%= event.formatted_begin_hour  == nil ? "?" : event.formatted_begin_hour %></span><span style="font-size:1.2em;">:00pm</span>&nbsp;to&nbsp;<span style="font-size:1.5em;"><%= event.formatted_end_hour == nil ? "?" : event.formatted_end_hour %></span><span style="font-size:1.2em;">:00pm</span></span>
                 </p>
           <% end %>
               </div>
@@ -20,7 +18,7 @@
           		</div>
 				<div class="info-wrapper">
 				<ul class="list-group">
-					<li style="font-size:1.2em;"><%= strip_tags(event.description) %></li>
+					<li style="font-size:1.2em;"><%= strip_tags(event.description == nil ? "No description" : event.description ) %></li>
 				</ul>
 					<a href="<%= event.url %>" class="btn"><span style="font-size:1.4em;">RSVP</span><br>on meetup.com</a>
 				</div>
@@ -31,14 +29,14 @@
 				<div id="google-maps">
 					<div class="google-maps">
 					</div>
-				</div>
+			        </div>
 </div>
 
 
 		<script type="text/javascript">
 		    $(".google-maps").gmap3({
 			marker:{
-			address:"<%= event.venue.full_address %>",
+			address:"<%= event.venue.full_address  == nil ? 'Kansas City, MO' : event.venue.full_address %>",
 			options:{ icon: "/assets/images/marker.png"}},
 			map:{
 			options:{
@@ -52,7 +50,7 @@
 			});
 		</script>
 	<% else %>
-	<p>Still looking for a location for&nbsp;<%= event.name %></p>
+	<p>Still looking for a location for&nbsp;<%= event.name  == nil ? "the event" : event.name %></p>
 	<% end %>
 
 
