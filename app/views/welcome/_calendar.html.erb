@@ -7,8 +7,7 @@
 				<h2><%= event.name || "?" %></h2>
 				<div class="price">
           <% if event.time.present? && event.duration.present? %>
-	            <% t = event.event_date || "Date not yet set"  %>
-				<span class="dollar"><span style="font-size:.8em;"><%= event.formatted_month || "?" %></span></span><span class="amt"><%= event.formatted_day_as_number || "?" %></span> <span class="mo"><%= event.formatted_year || "?" %></span> <span class="mo"><%= event.formatted_year || "?" %></span>
+				<span class="dollar"><span style="font-size:.8em;"><%= event.formatted_month || "?" %></span></span><span class="amt"><%= event.formatted_day_as_number || "?" %></span> <span class="mo"><%= event.formatted_year || "?" %></span> <span class="mo">
                 <p class="price-breakdown">
                 		<br><span style="font-size:1.5em;"><span style="font-size:1.5em;"><%= event.formatted_day_as_string || "?" %>&nbsp;&nbsp;&nbsp;</span><br><br><span style="font-size:1.5em;"</span><%= event.formatted_begin_hour || "?" %></span><span style="font-size:1.2em;">:00pm</span>&nbsp;to&nbsp;<span style="font-size:1.5em;"><%= event.formatted_end_hour || "?" %></span><span style="font-size:1.2em;">:00pm</span></span>
                 </p>
