@@ -6,6 +6,10 @@ class Event < HashThing
     nil
   end
 
+  def description
+    the_subject['description'].present? ? the_subject['description'] : "No description"
+  end
+
   def url
     "http://www.meetup.com/kcruby/events/#{id}"
   end
@@ -45,13 +49,21 @@ class Event < HashThing
     nil
   end
 
+  def name
+    the_subject['name'].present? ? the_subject['name'] : '?'
+  end
+
   def self.all
     MeetupClient.calendar["results"].map { |e| Event.new e }
   end
 
   def venue
-    return Venue.new(HashWithIndifferentAccess.new({ name: 'darren', address_1: '554 W Layton St', city: 'Olathe', state: 'KS' }))
+    return Venue.new(HashWithIndifferentAccess.new({ name: 'darrens', address_1: '554 W Layton St', city: 'Olathe', state: 'KS' }))
     the_subject['venue'] ? Venue.new(the_subject['venue']) : nil
+  end
+
+  def venue_name
+    event.venue.name || "?"
   end
 
 end
