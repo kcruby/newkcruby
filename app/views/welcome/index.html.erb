@@ -70,7 +70,7 @@
           </div>
         </div>
       <!--2-->
-      <% @meetup_members['results'].each do |result| %>
+      <% @meetup_members_results.each do |result| %>
           <% total_members = result['members'] %>
           <div class="col-sm-4 col-lg-4 text-center">
             <div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
@@ -94,7 +94,7 @@
           </script>
       <% end %>
 
-      <% total_members = @meetup_past_total['results'].length %>
+      <% total_members = @meetup_past_total_results.length %>
       <div class="col-sm-4 col-lg-4 text-center ">
         <div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
           <div id="counter-3"></div>
