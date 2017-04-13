@@ -3,11 +3,11 @@ require 'net/http'
 module MeetupClient
 
   def self.members
-    make_web_request "http://api.meetup.com/2/groups?group_id=575011&radius=25.0&order=id&desc=false&offset=0&photo-host=public&format=json&page=500&fields=&sign=true&key=#{ENV['API_KEY']}"
+    make_web_request "http://api.meetup.com/2/groups?group_id=575011&radius=25.0&order=id&desc=false&offset=0&photo-host=public&format=json&page=500&fields=&sign=true&key=#{ENV['MEETUP_API_KEY']}"
   end
 
   def self.calendar
-    make_web_request "http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=kcruby&format=json&page=20&fields=&sign=true&key=#{ENV['API_KEY']}"
+    make_web_request "http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=kcruby&format=json&page=20&fields=&sign=true&key=#{ENV['MEETUP_API_KEY']}"
   end
 
   def self.past_total
