@@ -58,7 +58,6 @@ class Event < HashThing
   end
 
   def venue
-    return Venue.new(HashWithIndifferentAccess.new({ name: 'darrens', address_1: '554 W Layton St', city: 'Olathe', state: 'KS' }))
     the_subject['venue'] ? Venue.new(the_subject['venue']) : nil
   end
 
