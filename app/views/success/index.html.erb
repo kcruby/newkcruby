@@ -1,0 +1,26 @@
+<% if flash[:notice] %>
+  <div class="container" style="margin-left:5%;">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 ">
+        <div class="alert"><%= flash[:notice] %></div>
+        <p>
+          There was a problem. The administrators have not been notified. It would be best to let us know via twitter: @kc_ruby
+        </p>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="container" style="margin-left:5%;">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 ">
+        <h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+          Looks like it worked!
+        </h1>
+        <p>
+        You should be getting an email inviting you to the KC Ruby Slack. Welcome!
+        </p>
+      </div>
+    </div>
+  </div>
+<% end %>
+

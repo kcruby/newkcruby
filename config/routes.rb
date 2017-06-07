@@ -13,6 +13,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :welcome, only: [:index, :create]
+  get '/success' => 'success#index', :as => :success
+
   resources :sessions, only: [:new, :create, :destroy]
   match '/gallery',  to: 'users#gallery',            via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
