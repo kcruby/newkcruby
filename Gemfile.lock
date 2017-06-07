@@ -67,6 +67,8 @@ GEM
     font-awesome-sass (4.1.0)
       sass (~> 3.2)
     hike (1.2.3)
+    httparty (0.15.5)
+      multi_xml (>= 0.5.2)
     i18n (0.6.9)
     jbuilder (2.1.1)
       activesupport (>= 3.0.0, < 5)
@@ -92,6 +94,7 @@ GEM
     mocha (1.1.0)
       metaclass (~> 0.0.1)
     multi_json (1.10.1)
+    multi_xml (0.6.0)
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.5)
@@ -196,6 +199,7 @@ DEPENDENCIES
   faker (= 1.4.2)
   font-awesome-rails
   font-awesome-sass
+  httparty
   jbuilder (~> 2.0)
   jquery-gmap3-rails
   jquery-rails
@@ -216,3 +220,6 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   webmock
   will_paginate
+
+BUNDLED WITH
+   1.15.0

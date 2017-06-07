@@ -35,6 +35,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-lg-12">
+
         <h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
           What to expect
         </h1>
@@ -223,6 +224,45 @@
     <div class="container" style="margin-left:5%;">
       <div class="row">
         <div class="col-sm-12 col-lg-12 ">
+
+          <div class="lead" style="font-size:5em;padding:15px 0 0 25px;">
+            Join us on <strong>Slack</strong>!
+          </div>
+          <div class="contact_form">
+            <div id="fields">
+              <%= form_tag( {:action => 'create'}, { :method => :post } ) do %>
+                <div style="margin:0 14% 0 14%;">
+                  <table>
+                    <tr>
+                      <td>
+                        Your Name:
+                      </td>
+                      <td>
+                        <%= text_field_tag(:name, nil, class: 'rounded inputs', placeholder: 'Your Name', required: true, style: "color:black") %>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Email:
+                      </td>
+                      <td>
+                        <%= text_field_tag(:email, nil, class: 'rounded inputs', placeholder: 'Email', required: true, style: "color:black") %>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan='2'>
+                        <input class="btn btn marg-right10" style="background-color: #2E3138" name="commit" value="Join KC Ruby Slack" type="submit">
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              <% end %>
+            </div>
+          </div>
+
+
+
+
           <div class="lead wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s" style="font-size:5em;padding:15px 0 0 25px;">
             Send us a <strong>message</strong>!
           </div>
