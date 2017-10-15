@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,23 +6,23 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources "contacts", only: [:new, :create]
 
-
   resources :users 
+  
   resources :blogs do
     resources :comments
   end
 
   resources :welcome, only: [:index, :create]
+  
   get '/success' => 'success#index', :as => :success
 
   resources :sessions, only: [:new, :create, :destroy]
-  match '/gallery',  to: 'users#gallery',            via: 'get'
-  match '/signup',  to: 'users#new',            via: 'get'
-  match '/signin',  to: 'sessions#new',         via: 'get'
-  match '/signout', to: 'sessions#destroy',     via: 'delete'
-  match '/contacts',     to: 'contacts#new',             via: 'get'
-  resources "contacts", only: [:new, :create]
   
+  get '/gallery', to: 'users#gallery'
+  get '/signup', to: 'users#new'
+  get '/signin', to: 'sessions#new'
+  delete '/signout', to: 'sessions#destroy'
+      
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
