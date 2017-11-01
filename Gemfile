@@ -62,6 +62,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'factory_girl_rails', '~> 4.4.0' 
   gem 'database_cleaner', '~> 1.3.0'
+  gem 'spring-commands-rspec'
 end
 
 # Use unicorn as the app server
