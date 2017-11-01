@@ -1,7 +1,7 @@
 class BlogsController < ApplicationController
 
   layout 'application'
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :update]
 
   # GET /blogs
   # GET /blogs.json
@@ -59,6 +59,7 @@ class BlogsController < ApplicationController
   # DELETE /blogs/1
   # DELETE /blogs/1.json
   def destroy
+    @blog = current_user.blogs.find params[:id]
     @blog.destroy
     respond_to do |format|
       format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
