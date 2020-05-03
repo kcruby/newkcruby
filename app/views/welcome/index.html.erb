@@ -80,19 +80,6 @@
           </div>
         </div>
         <!--3-->
-        <script type="text/javascript">
-          jQuery('#counter-2').appear(function () {
-              $('#counter-2').countTo({
-from: 0,
-to: <%= total_members.to_i %>,
-speed: 4000,
-refreshInterval: 50,
-onComplete: function (value) {
-//console.debug(this);
-}
-});
-              });
-</script>
       <% end %>
 
       <% total_members = @meetup_past_total_results.length %>
@@ -107,20 +94,6 @@ onComplete: function (value) {
   </div>
 </div>
 </section>
-<script type="text/javascript">
-  jQuery('#counter-3').appear(function () {
-      $('#counter-3').countTo({
-from: 0,
-to: <%= total_members %>,
-speed: 4000,
-refreshInterval: 50,
-onComplete: function (value) {
-//console.debug(this);
-}
-});
-      });
-    </script>
-    <!--//Javascript member and past meetup counter using Meetup API-->
 
     <!--TEAM SECTION STARTS-->
     <section id="team">
