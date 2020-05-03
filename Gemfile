@@ -24,7 +24,7 @@ gem 'simple_form'
 
 gem 'pg'
 
-gem 'devise'
+#gem 'devise'
 
 group :production, :staging do
       gem 'rails_12factor'

@@ -33,57 +33,39 @@
 			<!--//LOGO-->
 		
 		<!--MENU-->
-			<ul id="menu">
-			    <!-- TODO: Make home pagelinks ajax-->
-				
-			 <% if params[:controller] == 'welcome' %>
+    <ul id="menu">
+      <!-- TODO: Make home pagelinks ajax-->
 
-			    <li><a class="scroll" href="#home">Home</a></li>
-				<li><a class="scroll" href="#price">Upcoming Meetups</a></li>
-				<li><a class="scroll" href="#contact">Contact</a></li>
+      <% if params[:controller] == 'welcome' %>
 
-			<% else %>
+        <li><a class="scroll" href="#home">Home</a></li>
+        <li><a class="scroll" href="#price">Upcoming Meetups</a></li>
+        <li><a class="scroll" href="#contact">Contact</a></li>
 
-				<li><a class="scroll" href="#"><%= link_to 'Home', root_path, method: :get  %></a></li>
-				<li><a class="scroll" href="#"><%= link_to 'Upcoming Meetings', root_path + '#price', method: :get  %></a></li>
-				<li><a class="scroll" href="#"><%= link_to 'Contact', root_path + '#contact', method: :get  %></a></li>
+      <% else %>
 
-			<% end %>
+        <li><a class="scroll" href="#"><%= link_to 'Home', root_path, method: :get  %></a></li>
+        <li><a class="scroll" href="#"><%= link_to 'Upcoming Meetings', root_path + '#price', method: :get  %></a></li>
+        <li><a class="scroll" href="#"><%= link_to 'Contact', root_path + '#contact', method: :get  %></a></li>
 
-				<li><a class="scroll" href="#"><%= link_to 'Blog', root_path + 'blogs', method: :get  %></a></li>
+      <% end %>
 
-			<% if signed_in? %>
 
-                 <li><a class="scroll" href="#"><%= link_to "Users", users_path, method: :get %></a></li>
-                 <li><a class="scroll" href="#"><%= link_to "Photos", root_path + 'gallery', method: :get %></a></li>
-                <li><a class="scroll" href="#"><%= link_to "Profile", current_user, method: :get %></a></li>
-                <li><a class="scroll" href="#"><%= link_to "Settings", edit_user_path(current_user), method: :get %></a></li>
-                <li><a class="scroll" href="#">
-                  <%= link_to "Sign out", signout_path, method: "delete" %></a>
-                </li>
-              </ul>
-            </li>
 
-          <% else %>
+      <% if params[:controller] == 'welcome' %>
 
-          	<% if params[:controller] == 'welcome' %>
+        <li><a class="scroll" href="#about">What to Expect</a>&nbsp;&nbsp;&&nbsp;
+        <a class="scroll" href="#team">Who we are</a></li>
 
-          		<li><a class="scroll" href="#about">What to Expect</a>&nbsp;&nbsp;&&nbsp;
-				<a class="scroll" href="#team">Who we are</a></li>
-            
-			<% else %>
-				<script>WOW();</script>
-				<li><a class="scroll" href="#"><%= link_to 'What to Expect', root_path + '#about', method: :get  %></a>&nbsp;&nbsp;&&nbsp;
-				<a class="scroll" href="#"><%= link_to 'Who we are', root_path + '#team', method: :get  %></a></li>
+      <% else %>
+        <script>WOW();</script>
+        <li><a class="scroll" href="#"><%= link_to 'What to Expect', root_path + '#about', method: :get  %></a>&nbsp;&nbsp;&&nbsp;
+        <a class="scroll" href="#"><%= link_to 'Who we are', root_path + '#team', method: :get  %></a></li>
 
-			<% end %>
+      <% end %>
 
-            <li><a class="scroll" href="#"><%= link_to "Sign in", signin_path, method: :get %></a></li>
-            <li><a class="scroll" href="#"><%= link_to 'Sign Up', new_user_path, method: :get  %></a></li>
 
-          <% end %>
-
-			</ul>
+    </ul>
 
 			<!--//MENU-->
 		<!--RESPONSIVE TOGGLE-->
