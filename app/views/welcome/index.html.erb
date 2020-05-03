@@ -1,27 +1,27 @@
 <!--HOME SECTION STARTS-->
 <section id="home" class="single_image">
-  <div class="light_overlay">
-    <!--ANIMATED TEXT-->
-    <div id="content">
-      <div class="hidden-xs visible-sm visible-md visible-lg wow bounceInDown" data-wow-duration="2s">
-        <img src='/assets/images/biglogo.png' class="kclogo wow"/>
-      </div>
-      <div class="byline wow slideInLeft pad45" data-wow-duration="2s" data-wow-delay="0.5s">
-        Kansas City
-      </div>
-      <h1 class="wow bounceInDown" data-wow-duration="2s" data-wow-delay="0.7s">
-        RUBY
-      </h1>
-      <div class="name wow bounceInDown" data-wow-duration="3s" data-wow-delay="1s">
-        Users Group
-      </div>
-      <div class="text-center pad30">
-        <a href="#about" class="scroll">
-          <i class="fa fa-caret-down fa-inverse ilink fa-3x wow rotateIn animated" data-wow-duration="1s" data-wow-delay="2s"></i>
-        </a>
-      </div>
+<div class="light_overlay">
+  <!--ANIMATED TEXT-->
+  <div id="content">
+    <div class="hidden-xs visible-sm visible-md visible-lg wow bounceInDown" data-wow-duration="2s">
+      <img src='/assets/images/biglogo.png' class="kclogo wow"/>
+    </div>
+    <div class="byline wow slideInLeft pad45" data-wow-duration="2s" data-wow-delay="0.5s">
+      Kansas City
+    </div>
+    <h1 class="wow bounceInDown" data-wow-duration="2s" data-wow-delay="0.7s">
+      RUBY
+    </h1>
+    <div class="name wow bounceInDown" data-wow-duration="3s" data-wow-delay="1s">
+      Users Group
+    </div>
+    <div class="text-center pad30">
+      <a href="#about" class="scroll">
+        <i class="fa fa-caret-down fa-inverse ilink fa-3x wow rotateIn animated" data-wow-duration="1s" data-wow-delay="2s"></i>
+      </a>
     </div>
   </div>
+</div>
 </section>
 <!--//HOME SECTION ENDS-->
 
@@ -32,67 +32,67 @@
 
 <!--ABOUT SECTION STARTS-->
 <section id="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-lg-12">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-lg-12">
 
-        <h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
-          What to expect
-        </h1>
-        <div class="lead wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
-          Share ideas, code, and your love for <span class="colour"><strong>Ruby</strong></span>. Show off your latest
-          project, gems and plugins, or something you learned. <span class="colour">Open to all skill levels</span>…
-          just show up and join the fun!
-        </div>
+      <h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+        What to expect
+      </h1>
+      <div class="lead wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+        Share ideas, code, and your love for <span class="colour"><strong>Ruby</strong></span>. Show off your latest
+        project, gems and plugins, or something you learned. <span class="colour">Open to all skill levels</span>…
+        just show up and join the fun!
       </div>
     </div>
   </div>
+</div>
 </section>
 <!--//ABOUT SECTION ENDS-->
 
 <!--SOME STATS-->
 <section id="milestones">
-  <div class="well">
-    <div class="dark_overlay">
-      <div class="container">
-        <h1 class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
-          some stats
-        </h1>
+<div class="well">
+  <div class="dark_overlay">
+    <div class="container">
+      <h1 class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
+        some stats
+      </h1>
 
-        <div class="pad45"></div>
+      <div class="pad45"></div>
 
-        <!--COUNTERS-->
+      <!--COUNTERS-->
 
-        <!--1-->
-        <div class="col-sm-4 col-lg-4 text-center">
-          <div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
+      <!--1-->
+      <div class="col-sm-4 col-lg-4 text-center">
+        <div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
           <div id="counter-1"></div>
           <p class="light">Days Since Founded</p>
-          </div>
         </div>
+      </div>
       <!--2-->
       <% @meetup_members_results.each do |result| %>
-          <% total_members = result['members'] %>
-          <div class="col-sm-4 col-lg-4 text-center">
-            <div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
-              <div id="counter-2"></div>
-              <p class="light">Number Of Members</p>
-            </div>
+        <% total_members = result['members'] %>
+        <div class="col-sm-4 col-lg-4 text-center">
+          <div class="counter wow bounceIn" data-wow-offset="80" data-wow-duration="2s">
+            <div id="counter-2"></div>
+            <p class="light">Number Of Members</p>
           </div>
-          <!--3-->
-          <script type="text/javascript">
-              jQuery('#counter-2').appear(function () {
-                  $('#counter-2').countTo({
-                      from: 0,
-                      to: <%= total_members.to_i %>,
-                      speed: 4000,
-                      refreshInterval: 50,
-                      onComplete: function (value) {
-                          //console.debug(this);
-                      }
-                  });
+        </div>
+        <!--3-->
+        <script type="text/javascript">
+          jQuery('#counter-2').appear(function () {
+              $('#counter-2').countTo({
+from: 0,
+to: <%= total_members.to_i %>,
+speed: 4000,
+refreshInterval: 50,
+onComplete: function (value) {
+//console.debug(this);
+}
+});
               });
-          </script>
+</script>
       <% end %>
 
       <% total_members = @meetup_past_total_results.length %>
@@ -108,53 +108,54 @@
 </div>
 </section>
 <script type="text/javascript">
-    jQuery('#counter-3').appear(function () {
-        $('#counter-3').countTo({
-            from: 0,
-            to: <%= total_members %>,
-            speed: 4000,
-            refreshInterval: 50,
-            onComplete: function (value) {
-                //console.debug(this);
-            }
-        });
-    });
-</script>
-<!--//Javascript member and past meetup counter using Meetup API-->
+  jQuery('#counter-3').appear(function () {
+      $('#counter-3').countTo({
+from: 0,
+to: <%= total_members %>,
+speed: 4000,
+refreshInterval: 50,
+onComplete: function (value) {
+//console.debug(this);
+}
+});
+      });
+    </script>
+    <!--//Javascript member and past meetup counter using Meetup API-->
 
-<!--TEAM SECTION STARTS-->
-<section id="team">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-lg-12">
-        <h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
-          Who we are
-        </h1>
-        <div class="lead  wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
-          The <span style="font-size:1.2em;">Kansas City Ruby User Group</span> (KCRug) was founded in
-          <span class="colour">November of 2003</span>, by <strong><span class="colour">Jason Clinton</span></strong>
-          and <strong><span class="colour">Shashank Date</span></strong>. Jason and Shashank formed the group with the
-          desire to have <strong>a common place where Ruby programmers could come together</strong> and talk about Ruby.
+    <!--TEAM SECTION STARTS-->
+    <section id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-12">
+          <h1 class="wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+            Who we are
+          </h1>
+          <div class="lead  wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s">
+            The <span style="font-size:1.2em;">Kansas City Ruby User Group</span> (KCRug) was founded in
+            <span class="colour">November of 2003</span>, by <strong><span class="colour">Jason Clinton</span></strong>
+            and <strong><span class="colour">Shashank Date</span></strong>. Jason and Shashank formed the group with the
+            desire to have <strong>a common place where Ruby programmers could come together</strong> and talk about Ruby.
+          </div>
         </div>
-      </div>
-      <div class="col-sm-12 col-lg-6">
-        <p class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
+        <div class="col-sm-12 col-lg-6">
+          <p class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
           KCRug is a member of a community of User Groups around the country. Anyone is welcome to attend. There are no
           dues or fees, and you don't have to know anything about Ruby or Rails. There is a chance you might learn
           something from others in the group.
-        </p>
-      </div>
-      <div class="col-sm-12 col-lg-6">
-        <p class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
+          </p>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <p class="wow fadeIn" data-wow-offset="80" data-wow-duration="2s">
           Ruby is a computer programming language. It is very often used together with Rails, which is a framework for
           quickly producing robust web applications based upon databases.
-        </p>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
+    </section>
 
-  <!--UPCOMING MEETINGS SECTION STARTS-->
-  <section id="price">
+    <!--UPCOMING MEETINGS SECTION STARTS-->
+    <section id="price">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-lg-12">
@@ -177,11 +178,11 @@
         </div>
       </div>
     </div>
-  </section>
-  <!--//SECTION ENDS-->
+    </section>
+    <!--//SECTION ENDS-->
 
-  <!--CONTACT SECTION STARTS-->
-  <section id="contact">
+    <!--CONTACT SECTION STARTS-->
+    <section id="contact">
     <div class="container" style="margin-left:5%;">
       <div class="row">
         <div class="col-sm-12 col-lg-12 ">
@@ -224,6 +225,5 @@
         </div>
       </div>
     </div>
-  </section>
-  <!--//END CONTACT SECTION-->
-</section>
+    </section>
+    <!--//END CONTACT SECTION-->
