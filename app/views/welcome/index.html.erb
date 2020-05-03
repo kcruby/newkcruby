@@ -221,41 +221,6 @@
             </div>
           </div>
 
-
-
-
-          <div class="lead wow fadeInRightBig" data-wow-offset="80" data-wow-duration="2s" style="font-size:5em;padding:15px 0 0 25px;">
-            Send us a <strong>message</strong>!
-          </div>
-          <div class="row">
-            <div class="col-sm-12 col-lg-12  wow fadeInUp" data-wow-offset="80" data-wow-duration="2s">
-              <h2 style="font-size:1em;padding-left:25px;">
-                and check out our <strong>GitHub&nbsp;</strong>page&nbsp;&nbsp;
-                <a href="https://github.com/darrencauthon/newkcruby" style="font-size:1.7em;">
-                  <i class="fa fa-github"></i>
-                </a>
-              </h2>
-              <div class="col-sm-8 col-lg-8  wow fadeInUp" data-wow-offset="80" data-wow-duration="2s" style="margin:0 14% 0 14%;">
-                <div class="contact_form">
-                  <div id="note"></div>
-                  <div id="fields">
-                    <%= simple_form_for Contact.new, :html => {:id => 'ajax-contact-form'} do |f| %>
-                        <%= f.input :name, class: 'col-xs-12 col-md-12' %>
-                        <%= f.input :email, class: 'col-xs-12  col-md-12' %>
-                        <%= f.input :subject, class: 'col-xs-12  col-md-12' %>
-                        <%= f.input :message, :as => :text, class: 'col-xs-12  col-md-12' %>
-                        <div class="clear"></div>
-                        <br />
-                        <%= f.button :submit, 'Send message', class: 'btn marg-right10' %>
-                        <div class="clear"></div>
-                    <% end %>
-                    <div class="clear"></div>
-                  </div>
-                </div>
-                <!-- // End FORM -->
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
